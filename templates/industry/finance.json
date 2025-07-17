@@ -1,0 +1,304 @@
+{
+  "name": "Finance Professional",
+  "industry": "finance",
+  "description": "Conservative, results-focused template for investment banking, asset management, corporate finance, and financial analysis roles",
+  "suitable_roles": [
+    "investment banker", "financial analyst", "portfolio manager", "risk manager",
+    "corporate finance", "equity research", "private equity", "hedge fund analyst",
+    "financial advisor", "credit analyst", "compliance officer", "trader"
+  ],
+  "styles": {
+    "primaryColor": "#1e40af",
+    "secondaryColor": "#1e3a8a",
+    "accentColor": "#3b82f6",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1f2937",
+    "headerFont": "Times New Roman, serif",
+    "bodyFont": "Times New Roman, serif",
+    "spacing": "1.25rem",
+    "borderRadius": "0.25rem",
+    "conservative_styling": true
+  },
+  "layout": {
+    "columns": 2,
+    "headerHeight": "auto",
+    "sectionSpacing": "1.5rem",
+    "marginSize": "1.5rem",
+    "formal_structure": true
+  },
+  "sections": {
+    "header": {
+      "order": 1,
+      "fullWidth": true,
+      "style": "conservative_professional",
+      "fields": ["name", "title", "contact", "linkedin"],
+      "customization": {
+        "professional_title": true,
+        "credentials_after_name": true,
+        "formal_address": true
+      }
+    },
+    "professional_summary": {
+      "order": 2,
+      "fullWidth": true,
+      "title": "Professional Summary",
+      "style": "executive_paragraph",
+      "guidelines": {
+        "word_count": "80-150",
+        "focus": "financial expertise, analytical skills, business impact, leadership",
+        "tone": "professional, results-oriented, quantitative"
+      }
+    },
+    "core_competencies": {
+      "order": 3,
+      "column": "right",
+      "title": "Core Competencies",
+      "style": "finance_skills",
+      "priority": "high",
+      "categories": {
+        "analytical_skills": {
+          "title": "Analytical & Quantitative",
+          "examples": ["financial modeling", "valuation analysis", "risk assessment", "statistical analysis"]
+        },
+        "technical_skills": {
+          "title": "Technical Proficiency",
+          "examples": ["Excel/VBA", "Bloomberg Terminal", "Capital IQ", "Python/R", "SQL", "Tableau"]
+        },
+        "financial_knowledge": {
+          "title": "Financial Expertise",
+          "examples": ["equity research", "credit analysis", "portfolio management", "derivatives", "M&A"]
+        },
+        "regulatory": {
+          "title": "Regulatory & Compliance",
+          "examples": ["SOX", "GAAP", "IFRS", "Basel III", "Dodd-Frank", "MiFID II"]
+        }
+      }
+    },
+    "professional_experience": {
+      "order": 4,
+      "column": "left",
+      "title": "Professional Experience",
+      "style": "finance_detailed",
+      "priority": "high",
+      "fields": ["firm", "position", "location", "dates", "responsibilities", "achievements", "deal_experience"],
+      "guidelines": {
+        "emphasize": "quantifiable results, deal experience, client impact, revenue generation",
+        "quantify": "AUM, portfolio performance, cost savings, revenue, deal values, efficiency gains"
+      },
+      "customization": {
+        "deal_tombstones": false,
+        "client_confidentiality": true,
+        "performance_metrics": true
+      }
+    },
+    "education": {
+      "order": 5,
+      "column": "right",
+      "title": "Education",
+      "style": "academic_prestigious",
+      "priority": "high",
+      "fields": ["institution", "degree", "major", "graduation_date", "gpa", "honors", "relevant_coursework"],
+      "customization": {
+        "gpa_threshold": 3.5,
+        "prestigious_institutions": true,
+        "relevant_coursework": true,
+        "academic_honors": true
+      }
+    },
+    "certifications_licenses": {
+      "order": 6,
+      "column": "right",
+      "title": "Certifications & Licenses",
+      "style": "professional_credentials",
+      "fields": ["name", "issuer", "date", "license_number", "renewal_date"],
+      "examples": ["CFA", "FRM", "CPA", "Series 7", "Series 63", "PMP"],
+      "customization": {
+        "progression_tracking": true,
+        "renewal_status": true,
+        "credential_hierarchy": true
+      }
+    },
+    "key_achievements": {
+      "order": 7,
+      "fullWidth": true,
+      "title": "Key Achievements & Impact",
+      "style": "quantified_results",
+      "guidelines": {
+        "focus": "financial performance, process improvements, client satisfaction, team leadership",
+        "metrics": "ROI, AUM growth, cost reduction, revenue increase, client retention, deal closure rates"
+      }
+    },
+    "deal_experience": {
+      "order": 8,
+      "column": "left",
+      "title": "Notable Transaction Experience",
+      "style": "deal_tombstone",
+      "optional": true,
+      "fields": ["transaction_type", "deal_value", "role", "sector", "date"],
+      "customization": {
+        "confidentiality_maintained": true,
+        "deal_value_ranges": true,
+        "sector_expertise": true
+      }
+    },
+    "technical_proficiency": {
+      "order": 9,
+      "column": "right",
+      "title": "Technical Proficiency",
+      "style": "finance_tools",
+      "categories": {
+        "financial_software": {
+          "title": "Financial Platforms",
+          "examples": ["Bloomberg Terminal", "Reuters Eikon", "FactSet", "Capital IQ", "PitchBook"]
+        },
+        "analytical_tools": {
+          "title": "Analytical Tools",
+          "examples": ["Excel/VBA", "MATLAB", "R", "Python", "SAS", "Stata"]
+        },
+        "databases": {
+          "title": "Databases & Systems",
+          "examples": ["SQL", "Oracle", "SAP", "Hyperion", "Cognos"]
+        }
+      }
+    },
+    "publications_research": {
+      "order": 10,
+      "fullWidth": true,
+      "title": "Research & Publications",
+      "style": "academic_citation",
+      "optional": true,
+      "fields": ["title", "publication", "date", "co_authors", "citation_count"]
+    },
+    "professional_affiliations": {
+      "order": 11,
+      "column": "right",
+      "title": "Professional Affiliations",
+      "style": "membership_list",
+      "examples": ["CFA Institute", "FRM Institute", "NYSSA", "CPA Society"],
+      "fields": ["organization", "membership_type", "leadership_roles", "dates"]
+    },
+    "languages": {
+      "order": 12,
+      "column": "right",
+      "title": "Languages",
+      "style": "proficiency_levels",
+      "optional": true,
+      "customization": {
+        "business_relevance": true,
+        "client_service": true
+      }
+    }
+  },
+  "industry_keywords": [
+    "financial analysis", "investment banking", "portfolio management", "risk management",
+    "equity research", "credit analysis", "financial modeling", "valuation", "DCF",
+    "LBO", "M&A", "due diligence", "capital markets", "derivatives", "fixed income",
+    "asset management", "wealth management", "private equity", "hedge funds",
+    "compliance", "regulatory", "GAAP", "IFRS", "SOX", "Basel", "stress testing",
+    "quantitative analysis", "market research", "client relationship management"
+  ],
+  "quantitative_emphasis": {
+    "financial_metrics": true,
+    "performance_attribution": true,
+    "roi_calculations": true,
+    "cost_benefit_analysis": true
+  },
+  "formatting_guidelines": {
+    "date_format": "MM/YYYY",
+    "currency_format": "USD_standard",
+    "number_formatting": "financial_notation",
+    "confidentiality": "deal_anonymization",
+    "formal_tone": true
+  },
+  "ats_optimization": {
+    "keywords_density": "medium_high",
+    "financial_terminology": "prominent",
+    "section_headers": "traditional",
+    "file_format": "pdf_preferred"
+  },
+  "customization_options": {
+    "role_focus": {
+      "investment_banking": {
+        "emphasize": ["deal_experience", "financial_modeling", "client_management", "market_knowledge"],
+        "highlight_skills": ["M&A", "LBO", "DCF", "comparable_analysis", "pitch_preparation"]
+      },
+      "asset_management": {
+        "emphasize": ["portfolio_performance", "investment_research", "risk_management", "client_service"],
+        "highlight_skills": ["portfolio_construction", "performance_attribution", "alpha_generation", "client_reporting"]
+      },
+      "risk_management": {
+        "emphasize": ["risk_assessment", "regulatory_compliance", "quantitative_analysis", "model_validation"],
+        "highlight_skills": ["VaR", "stress_testing", "Basel_III", "model_risk", "credit_risk"]
+      },
+      "equity_research": {
+        "emphasize": ["research_methodology", "financial_modeling", "industry_analysis", "recommendation_track_record"],
+        "highlight_skills": ["valuation_models", "sector_expertise", "earnings_forecasting", "investment_thesis"]
+      },
+      "corporate_finance": {
+        "emphasize": ["financial_planning", "capital_structure", "strategic_initiatives", "stakeholder_management"],
+        "highlight_skills": ["budgeting", "forecasting", "capital_allocation", "investor_relations"]
+      },
+      "trading": {
+        "emphasize": ["market_knowledge", "execution_skills", "p&l_management", "risk_controls"],
+        "highlight_skills": ["derivatives", "market_making", "algorithmic_trading", "order_management"]
+      }
+    },
+    "experience_level": {
+      "analyst": {
+        "emphasize": ["education", "technical_skills", "analytical_abilities", "learning_agility"],
+        "include": ["academic_projects", "internship_experience", "certifications", "coursework"]
+      },
+      "associate": {
+        "emphasize": ["deal_experience", "client_interaction", "project_management", "technical_expertise"],
+        "include": ["transaction_experience", "modeling_skills", "presentation_abilities"]
+      },
+      "vice_president": {
+        "emphasize": ["client_management", "business_development", "team_leadership", "p&l_responsibility"],
+        "include": ["revenue_generation", "team_management", "strategic_initiatives"]
+      },
+      "director_md": {
+        "emphasize": ["business_leadership", "client_relationships", "strategic_vision", "organizational_impact"],
+        "include": ["p&l_ownership", "business_development", "thought_leadership", "board_interaction"]
+      }
+    }
+  },
+  "role_specific_variants": {
+    "investment_banker": {
+      "required_sections": ["deal_experience", "financial_modeling", "client_management"],
+      "emphasized_skills": ["M&A", "capital_raising", "financial_analysis", "client_presentation"],
+      "additional_sections": ["transaction_tombstones", "sector_expertise", "capital_markets"]
+    },
+    "portfolio_manager": {
+      "required_sections": ["investment_philosophy", "portfolio_performance", "risk_management"],
+      "emphasized_skills": ["asset_allocation", "security_selection", "performance_attribution", "client_service"],
+      "additional_sections": ["investment_process", "benchmark_performance", "asset_class_expertise"]
+    },
+    "financial_analyst": {
+      "required_sections": ["analytical_experience", "financial_modeling", "research_capabilities"],
+      "emphasized_skills": ["financial_analysis", "forecasting", "valuation", "industry_research"],
+      "additional_sections": ["model_building", "variance_analysis", "business_partnering"]
+    },
+    "risk_manager": {
+      "required_sections": ["risk_experience", "regulatory_knowledge", "quantitative_skills"],
+      "emphasized_skills": ["risk_measurement", "model_validation", "regulatory_compliance", "stress_testing"],
+      "additional_sections": ["model_governance", "regulatory_reporting", "risk_frameworks"]
+    },
+    "compliance_officer": {
+      "required_sections": ["regulatory_experience", "compliance_programs", "audit_experience"],
+      "emphasized_skills": ["regulatory_knowledge", "policy_development", "training_programs", "investigations"],
+      "additional_sections": ["regulatory_relationships", "compliance_testing", "remediation_programs"]
+    }
+  },
+  "performance_metrics": {
+    "investment_performance": ["alpha", "sharpe_ratio", "information_ratio", "tracking_error"],
+    "business_metrics": ["revenue_growth", "aum_growth", "client_retention", "cost_ratio"],
+    "risk_metrics": ["var", "expected_shortfall", "maximum_drawdown", "correlation"],
+    "efficiency_metrics": ["process_improvement", "cost_reduction", "automation", "error_reduction"]
+  },
+  "regulatory_emphasis": {
+    "compliance_awareness": true,
+    "regulatory_updates": true,
+    "audit_experience": true,
+    "policy_development": true
+  }
+}
