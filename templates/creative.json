@@ -1,0 +1,59 @@
+{
+  "name": "Creative",
+  "description": "Design-focused layout with visual elements",
+  "styles": {
+    "primaryColor": "#7c3aed",
+    "secondaryColor": "#a855f7",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1f2937",
+    "headerFont": "Poppins, sans-serif",
+    "bodyFont": "Open Sans, sans-serif",
+    "spacing": "1.5rem",
+    "borderRadius": "0.75rem"
+  },
+  "layout": {
+    "columns": 2,
+    "headerHeight": "auto",
+    "sectionSpacing": "2rem",
+    "marginSize": "1.5rem"
+  },
+  "sections": {
+    "header": {
+      "order": 1,
+      "fullWidth": true,
+      "style": "creative",
+      "fields": ["name", "title", "contact", "portfolio"]
+    },
+    "about": {
+      "order": 2,
+      "fullWidth": true,
+      "title": "About Me",
+      "style": "paragraph"
+    },
+    "experience": {
+      "order": 3,
+      "column": "left",
+      "title": "Experience",
+      "style": "creative",
+      "dateFormat": "MMM YYYY"
+    },
+    "skills": {
+      "order": 4,
+      "column": "right",
+      "title": "Skills",
+      "style": "progress"
+    },
+    "portfolio": {
+      "order": 5,
+      "column": "right",
+      "title": "Portfolio",
+      "style": "showcase"
+    },
+    "education": {
+      "order": 6,
+      "column": "left",
+      "title": "Education",
+      "style": "compact"
+    }
+  }
+}
