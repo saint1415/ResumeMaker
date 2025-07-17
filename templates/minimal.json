@@ -1,0 +1,47 @@
+{
+  "name": "Minimal",
+  "description": "Simple, clean design with minimal styling",
+  "styles": {
+    "primaryColor": "#374151",
+    "secondaryColor": "#6b7280",
+    "backgroundColor": "#ffffff",
+    "textColor": "#374151",
+    "headerFont": "Arial, sans-serif",
+    "bodyFont": "Arial, sans-serif",
+    "spacing": "1.25rem",
+    "borderRadius": "0"
+  },
+  "layout": {
+    "columns": 1,
+    "headerHeight": "auto",
+    "sectionSpacing": "1.5rem",
+    "marginSize": "1.25rem"
+  },
+  "sections": {
+    "header": {
+      "order": 1,
+      "fullWidth": true,
+      "style": "minimal",
+      "fields": ["name", "contact"]
+    },
+    "experience": {
+      "order": 2,
+      "fullWidth": true,
+      "title": "Experience",
+      "style": "simple",
+      "dateFormat": "YYYY"
+    },
+    "education": {
+      "order": 3,
+      "fullWidth": true,
+      "title": "Education",
+      "style": "simple"
+    },
+    "skills": {
+      "order": 4,
+      "fullWidth": true,
+      "title": "Skills",
+      "style": "simple"
+    }
+  }
+}
