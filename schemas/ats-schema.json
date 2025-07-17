@@ -1,0 +1,380 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ATS Optimization Configuration Schema",
+  "description": "Schema for ATS optimization settings and keyword analysis",
+  "type": "object",
+  "properties": {
+    "optimization_settings": {
+      "type": "object",
+      "properties": {
+        "industry": {
+          "type": "string",
+          "enum": ["technology", "finance", "healthcare", "marketing", "sales", "project_management", "general"],
+          "description": "Target industry for optimization"
+        },
+        "job_level": {
+          "type": "string",
+          "enum": ["entry", "mid", "senior", "executive"],
+          "description": "Target job level"
+        },
+        "keyword_density_target": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5,
+          "default": 2.5,
+          "description": "Target keyword density percentage"
+        },
+        "max_keywords": {
+          "type": "integer",
+          "minimum": 10,
+          "maximum": 50,
+          "default": 25,
+          "description": "Maximum number of keywords to analyze"
+        },
+        "similarity_threshold": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 1.0,
+          "default": 0.8,
+          "description": "Similarity threshold for fuzzy keyword matching"
+        }
+      },
+      "required": ["industry", "job_level"]
+    },
+    "scoring_weights": {
+      "type": "object",
+      "properties": {
+        "keywords": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.4,
+          "description": "Weight for keyword matching score"
+        },
+        "formatting": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.2,
+          "description": "Weight for ATS-friendly formatting"
+        },
+        "skills": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.2,
+          "description": "Weight for skills section quality"
+        },
+        "experience": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.1,
+          "description": "Weight for experience section quality"
+        },
+        "education": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.1,
+          "description": "Weight for education section quality"
+        }
+      },
+      "additionalProperties": false
+    },
+    "keyword_analysis": {
+      "type": "object",
+      "properties": {
+        "extraction_methods": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["tf-idf", "phrase_extraction", "named_entity", "industry_specific"]
+          },
+          "default": ["tf-idf", "phrase_extraction", "industry_specific"]
+        },
+        "phrase_length": {
+          "type": "object",
+          "properties": {
+            "min_words": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 2
+            },
+            "max_words": {
+              "type": "integer",
+              "minimum": 2,
+              "default": 4
+            }
+          }
+        },
+        "stop_words": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Words to exclude from keyword analysis"
+        },
+        "minimum_frequency": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 2,
+          "description": "Minimum frequency for keyword inclusion"
+        }
+      }
+    },
+    "formatting_rules": {
+      "type": "object",
+      "properties": {
+        "preferred_fonts": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": ["Arial", "Calibri", "Times New Roman", "Helvetica"]
+        },
+        "avoid_elements": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": ["tables", "graphics", "images", "text boxes", "headers", "footers"]
+        },
+        "required_sections": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": ["personal", "experience", "education", "skills"]
+        },
+        "recommended_sections": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": ["summary", "certifications", "projects"]
+        },
+        "file_formats": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": ["pdf", "docx", "txt"]
+        },
+        "max_file_size_mb": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 10,
+          "default": 5
+        }
+      }
+    },
+    "keyword_categories": {
+      "type": "object",
+      "properties": {
+        "technical": {
+          "type": "object",
+          "properties": {
+            "weight": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.4},
+            "importance": {"type": "string", "enum": ["low", "medium", "high"], "default": "high"},
+            "required_count": {"type": "integer", "minimum": 0, "default": 5}
+          }
+        },
+        "soft_skills": {
+          "type": "object",
+          "properties": {
+            "weight": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.2},
+            "importance": {"type": "string", "enum": ["low", "medium", "high"], "default": "medium"},
+            "required_count": {"type": "integer", "minimum": 0, "default": 3}
+          }
+        },
+        "industry": {
+          "type": "object",
+          "properties": {
+            "weight": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.3},
+            "importance": {"type": "string", "enum": ["low", "medium", "high"], "default": "high"},
+            "required_count": {"type": "integer", "minimum": 0, "default": 4}
+          }
+        },
+        "certifications": {
+          "type": "object",
+          "properties": {
+            "weight": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.1},
+            "importance": {"type": "string", "enum": ["low", "medium", "high"], "default": "medium"},
+            "required_count": {"type": "integer", "minimum": 0, "default": 1}
+          }
+        }
+      }
+    },
+    "match_types": {
+      "type": "object",
+      "properties": {
+        "exact": {
+          "type": "object",
+          "properties": {
+            "score_multiplier": {"type": "number", "minimum": 0, "default": 1.0},
+            "confidence": {"type": "number", "minimum": 0, "maximum": 1, "default": 1.0}
+          }
+        },
+        "fuzzy": {
+          "type": "object",
+          "properties": {
+            "score_multiplier": {"type": "number", "minimum": 0, "default": 0.8},
+            "confidence": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.8},
+            "threshold": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.8}
+          }
+        },
+        "synonym": {
+          "type": "object",
+          "properties": {
+            "score_multiplier": {"type": "number", "minimum": 0, "default": 0.9},
+            "confidence": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.9}
+          }
+        },
+        "phrase": {
+          "type": "object",
+          "properties": {
+            "score_multiplier": {"type": "number", "minimum": 0, "default": 1.2},
+            "confidence": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.95}
+          }
+        }
+      }
+    },
+    "density_analysis": {
+      "type": "object",
+      "properties": {
+        "optimal_range": {
+          "type": "object",
+          "properties": {
+            "min_percentage": {"type": "number", "minimum": 0, "default": 1.0},
+            "max_percentage": {"type": "number", "minimum": 0, "default": 3.0}
+          }
+        },
+        "warning_thresholds": {
+          "type": "object",
+          "properties": {
+            "underuse": {"type": "number", "minimum": 0, "default": 0.5},
+            "overuse": {"type": "number", "minimum": 0, "default": 4.0}
+          }
+        },
+        "section_weights": {
+          "type": "object",
+          "properties": {
+            "summary": {"type": "number", "minimum": 0, "default": 0.3},
+            "experience": {"type": "number", "minimum": 0, "default": 0.4},
+            "skills": {"type": "number", "minimum": 0, "default": 0.2},
+            "education": {"type": "number", "minimum": 0, "default": 0.1}
+          }
+        }
+      }
+    },
+    "recommendations": {
+      "type": "object",
+      "properties": {
+        "priority_levels": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": ["critical", "high", "medium", "low"]
+        },
+        "max_suggestions": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 10
+        },
+        "section_suggestions": {
+          "type": "object",
+          "properties": {
+            "technical_keywords": {"type": "string", "default": "skills"},
+            "soft_skills": {"type": "string", "default": "experience"},
+            "industry_terms": {"type": "string", "default": "summary"},
+            "certifications": {"type": "string", "default": "certifications"}
+          }
+        },
+        "improvement_categories": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": ["keyword", "section", "formatting", "content", "structure"]
+        }
+      }
+    },
+    "validation_rules": {
+      "type": "object",
+      "properties": {
+        "required_contact_fields": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": ["name", "email", "phone"]
+        },
+        "minimum_experience_entries": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 1
+        },
+        "minimum_skills_count": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 5
+        },
+        "summary_min_words": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 50
+        },
+        "summary_max_words": {
+          "type": "integer",
+          "minimum": 50,
+          "default": 200
+        }
+      }
+    },
+    "output_format": {
+      "type": "object",
+      "properties": {
+        "include_confidence_scores": {
+          "type": "boolean",
+          "default": true
+        },
+        "include_improvement_suggestions": {
+          "type": "boolean",
+          "default": true
+        },
+        "include_keyword_placement": {
+          "type": "boolean",
+          "default": true
+        },
+        "include_density_analysis": {
+          "type": "boolean",
+          "default": true
+        },
+        "include_competitive_analysis": {
+          "type": "boolean",
+          "default": false
+        },
+        "detailed_explanations": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "industry_specific_rules": {
+      "type": "object",
+      "patternProperties": {
+        "^(technology|finance|healthcare|marketing|sales|project_management)$": {
+          "type": "object",
+          "properties": {
+            "required_keywords": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "bonus_keywords": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "avoided_keywords": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "preferred_certifications": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "section_priorities": {
+              "type": "object",
+              "additionalProperties": {"type": "number"}
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["optimization_settings", "scoring_weights"],
+  "additionalProperties": false
+}
