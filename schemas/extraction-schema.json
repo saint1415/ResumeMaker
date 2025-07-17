@@ -1,0 +1,203 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Resume Extraction Configuration",
+  "type": "object",
+  "properties": {
+    "patterns": {
+      "type": "object",
+      "description": "Regular expressions for extracting resume sections",
+      "properties": {
+        "sectionHeaders": {
+          "type": "object",
+          "properties": {
+            "experience": {
+              "type": "array",
+              "items": {"type": "string"},
+              "default": ["EXPERIENCE", "WORK EXPERIENCE", "EMPLOYMENT", "PROFESSIONAL EXPERIENCE", "CAREER HISTORY"]
+            },
+            "education": {
+              "type": "array", 
+              "items": {"type": "string"},
+              "default": ["EDUCATION", "ACADEMIC BACKGROUND", "QUALIFICATIONS", "ACADEMIC HISTORY"]
+            },
+            "skills": {
+              "type": "array",
+              "items": {"type": "string"},
+              "default": ["SKILLS", "TECHNICAL SKILLS", "CORE COMPETENCIES", "EXPERTISE", "TECHNOLOGIES"]
+            },
+            "summary": {
+              "type": "array",
+              "items": {"type": "string"},
+              "default": ["SUMMARY", "PROFILE", "OBJECTIVE", "ABOUT", "OVERVIEW"]
+            },
+            "projects": {
+              "type": "array",
+              "items": {"type": "string"},
+              "default": ["PROJECTS", "PORTFOLIO", "WORK SAMPLES", "SELECTED PROJECTS"]
+            },
+            "certifications": {
+              "type": "array",
+              "items": {"type": "string"},
+              "default": ["CERTIFICATIONS", "CERTIFICATES", "LICENSES", "CREDENTIALS"]
+            }
+          }
+        },
+        "contactInfo": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "default": "([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,})"
+            },
+            "phone": {
+              "type": "string",
+              "default": "(\\+?1?[-\\.\\s]?\\(?[0-9]{3}\\)?[-\\.\\s]?[0-9]{3}[-\\.\\s]?[0-9]{4})"
+            },
+            "linkedin": {
+              "type": "string",
+              "default": "(linkedin\\.com\\/in\\/[\\w-]+)"
+            },
+            "github": {
+              "type": "string",
+              "default": "(github\\.com\\/[\\w-]+)"
+            },
+            "website": {
+              "type": "string",
+              "default": "((?:https?:\\/\\/)?(?:www\\.)?[\\w-]+\\.[\\w.]+)"
+            }
+          }
+        },
+        "dates": {
+          "type": "object",
+          "properties": {
+            "monthYear": {
+              "type": "string",
+              "default": "(\\w{3,9})\\s+(\\d{4})"
+            },
+            "yearOnly": {
+              "type": "string",
+              "default": "(\\d{4})"
+            },
+            "dateRange": {
+              "type": "string",
+              "default": "(\\d{4}|\\w{3,9}\\s+\\d{4})\\s*[-–—]\\s*(\\d{4}|\\w{3,9}\\s+\\d{4}|present|current)"
+            }
+          }
+        }
+      }
+    },
+    "extraction": {
+      "type": "object",
+      "description": "Configuration for text extraction and processing",
+      "properties": {
+        "cleaningRules": {
+          "type": "object",
+          "properties": {
+            "removeExtraSpaces": {"type": "boolean", "default": true},
+            "removeSpecialChars": {"type": "boolean", "default": true},
+            "standardizeDates": {"type": "boolean", "default": true},
+            "normalizeText": {"type": "boolean", "default": true}
+          }
+        },
+        "sectionParsing": {
+          "type": "object",
+          "properties": {
+            "splitOnDoubleNewlines": {"type": "boolean", "default": true},
+            "identifyBulletPoints": {"type": "boolean", "default": true},
+            "extractDates": {"type": "boolean", "default": true},
+            "parseCompanyPositions": {"type": "boolean", "default": true}
+          }
+        },
+        "validation": {
+          "type": "object",
+          "properties": {
+            "requireName": {"type": "boolean", "default": true},
+            "requireEmail": {"type": "boolean", "default": true},
+            "minimumExperienceEntries": {"type": "number", "default": 1},
+            "minimumEducationEntries": {"type": "number", "default": 0}
+          }
+        }
+      }
+    },
+    "scoring": {
+      "type": "object",
+      "description": "Resume completeness scoring configuration",
+      "properties": {
+        "weights": {
+          "type": "object",
+          "properties": {
+            "personal": {"type": "number", "default": 25},
+            "summary": {"type": "number", "default": 15},
+            "experience": {"type": "number", "default": 35},
+            "education": {"type": "number", "default": 15},
+            "skills": {"type": "number", "default": 10}
+          }
+        },
+        "personalInfoScoring": {
+          "type": "object",
+          "properties": {
+            "name": {"type": "number", "default": 20},
+            "email": {"type": "number", "default": 20},
+            "phone": {"type": "number", "default": 15},
+            "location": {"type": "number", "default": 10},
+            "linkedin": {"type": "number", "default": 10},
+            "github": {"type": "number", "default": 10},
+            "website": {"type": "number", "default": 10},
+            "title": {"type": "number", "default": 5}
+          }
+        },
+        "experienceScoring": {
+          "type": "object",
+          "properties": {
+            "company": {"type": "number", "default": 25},
+            "position": {"type": "number", "default": 25},
+            "dates": {"type": "number", "default": 20},
+            "achievements": {"type": "number", "default": 30}
+          }
+        }
+      }
+    },
+    "formats": {
+      "type": "object",
+      "description": "Supported file formats and their processing",
+      "properties": {
+        "pdf": {
+          "type": "object",
+          "properties": {
+            "supported": {"type": "boolean", "default": true},
+            "maxSize": {"type": "number", "default": 10485760},
+            "requiresOCR": {"type": "boolean", "default": false}
+          }
+        },
+        "docx": {
+          "type": "object",
+          "properties": {
+            "supported": {"type": "boolean", "default": false},
+            "maxSize": {"type": "number", "default": 10485760}
+          }
+        },
+        "txt": {
+          "type": "object",
+          "properties": {
+            "supported": {"type": "boolean", "default": true},
+            "maxSize": {"type": "number", "default": 1048576}
+          }
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "description": "Output formatting configuration",
+      "properties": {
+        "dateFormat": {
+          "type": "string",
+          "enum": ["YYYY-MM", "MM/YYYY", "YYYY"],
+          "default": "YYYY-MM"
+        },
+        "preserveOriginalFormatting": {"type": "boolean", "default": false},
+        "includeExtractionMetadata": {"type": "boolean", "default": true},
+        "confidenceScores": {"type": "boolean", "default": true}
+      }
+    }
+  }
+}
