@@ -1,0 +1,59 @@
+{
+  "name": "Modern",
+  "description": "Clean, contemporary design with accent colors",
+  "styles": {
+    "primaryColor": "#2563eb",
+    "secondaryColor": "#64748b",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1e293b",
+    "headerFont": "Inter, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "spacing": "1.5rem",
+    "borderRadius": "0.5rem"
+  },
+  "layout": {
+    "columns": 2,
+    "headerHeight": "auto",
+    "sectionSpacing": "2rem",
+    "marginSize": "1.5rem"
+  },
+  "sections": {
+    "header": {
+      "order": 1,
+      "fullWidth": true,
+      "style": "centered",
+      "fields": ["name", "title", "contact"]
+    },
+    "summary": {
+      "order": 2,
+      "fullWidth": true,
+      "title": "Professional Summary",
+      "style": "paragraph"
+    },
+    "experience": {
+      "order": 3,
+      "column": "left",
+      "title": "Experience",
+      "style": "timeline",
+      "dateFormat": "MMM YYYY"
+    },
+    "education": {
+      "order": 4,
+      "column": "right",
+      "title": "Education",
+      "style": "compact"
+    },
+    "skills": {
+      "order": 5,
+      "column": "right",
+      "title": "Skills",
+      "style": "tags"
+    },
+    "projects": {
+      "order": 6,
+      "column": "left",
+      "title": "Projects",
+      "style": "list"
+    }
+  }
+}
