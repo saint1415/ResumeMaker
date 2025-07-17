@@ -1,0 +1,595 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Resume Scoring Configuration Schema",
+  "description": "Schema for resume scoring algorithms and configuration",
+  "type": "object",
+  "properties": {
+    "scoring_config": {
+      "type": "object",
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "enum": ["weighted", "rubric", "composite", "ml_inspired"],
+          "default": "weighted",
+          "description": "Scoring algorithm to use"
+        },
+        "industry": {
+          "type": "string",
+          "enum": ["technology", "finance", "healthcare", "marketing", "sales", "general"],
+          "default": "general",
+          "description": "Industry context for scoring"
+        },
+        "position_level": {
+          "type": "string",
+          "enum": ["entry", "mid", "senior", "executive"],
+          "default": "mid",
+          "description": "Position level for appropriate expectations"
+        },
+        "custom_weights": {
+          "type": "object",
+          "description": "Custom weights for scoring components",
+          "properties": {
+            "content": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Weight for content quality"
+            },
+            "structure": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Weight for structure and formatting"
+            },
+            "keywords": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Weight for keyword optimization"
+            },
+            "achievements": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Weight for achievement quality"
+            },
+            "readability": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Weight for language and readability"
+            }
+          },
+          "additionalProperties": false
+        },
+        "include_details": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include detailed scoring breakdown"
+        },
+        "benchmark_comparison": {
+          "type": "boolean",
+          "default": false,
+          "description": "Include industry benchmark comparison"
+        }
+      },
+      "required": ["algorithm"],
+      "additionalProperties": false
+    },
+    "weighted_algorithm": {
+      "type": "object",
+      "properties": {
+        "weights": {
+          "type": "object",
+          "properties": {
+            "content_quality": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0.35
+            },
+            "technical_skills": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0.20
+            },
+            "experience_relevance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0.20
+            },
+            "achievement_impact": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0.15
+            },
+            "language_clarity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0.10
+            }
+          },
+          "additionalProperties": false
+        },
+        "scaling": {
+          "type": "string",
+          "enum": ["linear", "logarithmic", "exponential"],
+          "default": "linear"
+        },
+        "normalization": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "rubric_algorithm": {
+      "type": "object",
+      "properties": {
+        "criteria": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z_]+$": {
+              "type": "object",
+              "properties": {
+                "category": {
+                  "type": "string",
+                  "enum": ["essential", "important", "desirable"]
+                },
+                "weight": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "scoring_levels": {
+                  "type": "object",
+                  "properties": {
+                    "excellent": {
+                      "type": "object",
+                      "properties": {
+                        "min_score": {"type": "number", "minimum": 90, "maximum": 100},
+                        "requirements": {
+                          "type": "array",
+                          "items": {"type": "string"}
+                        }
+                      }
+                    },
+                    "good": {
+                      "type": "object",
+                      "properties": {
+                        "min_score": {"type": "number", "minimum": 75, "maximum": 89},
+                        "requirements": {
+                          "type": "array",
+                          "items": {"type": "string"}
+                        }
+                      }
+                    },
+                    "satisfactory": {
+                      "type": "object",
+                      "properties": {
+                        "min_score": {"type": "number", "minimum": 60, "maximum": 74},
+                        "requirements": {
+                          "type": "array",
+                          "items": {"type": "string"}
+                        }
+                      }
+                    },
+                    "needs_improvement": {
+                      "type": "object",
+                      "properties": {
+                        "min_score": {"type": "number", "minimum": 40, "maximum": 59},
+                        "requirements": {
+                          "type": "array",
+                          "items": {"type": "string"}
+                        }
+                      }
+                    },
+                    "poor": {
+                      "type": "object",
+                      "properties": {
+                        "min_score": {"type": "number", "minimum": 0, "maximum": 39},
+                        "requirements": {
+                          "type": "array",
+                          "items": {"type": "string"}
+                        }
+                      }
+                    }
+                  },
+                  "required": ["excellent", "good", "satisfactory", "needs_improvement", "poor"]
+                }
+              },
+              "required": ["category", "weight", "scoring_levels"]
+            }
+          }
+        },
+        "category_weights": {
+          "type": "object",
+          "properties": {
+            "essential": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.5},
+            "important": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.3},
+            "desirable": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.2}
+          }
+        }
+      }
+    },
+    "composite_algorithm": {
+      "type": "object",
+      "properties": {
+        "components": {
+          "type": "object",
+          "properties": {
+            "ats_compatibility": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0.30
+            },
+            "human_readability": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0.25
+            },
+            "content_relevance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0.25
+            },
+            "professional_presentation": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0.20
+            }
+          }
+        },
+        "boost_factors": {
+          "type": "object",
+          "properties": {
+            "industry_match": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2,
+              "default": 1.1
+            },
+            "level_appropriate": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2,
+              "default": 1.05
+            },
+            "recent_update": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2,
+              "default": 1.02
+            }
+          }
+        }
+      }
+    },
+    "ml_algorithm": {
+      "type": "object",
+      "properties": {
+        "feature_weights": {
+          "type": "object",
+          "properties": {
+            "experience_count": {"type": "number", "default": 0.8},
+            "total_achievements": {"type": "number", "default": 0.6},
+            "quantified_achievements": {"type": "number", "default": 1.2},
+            "skills_count": {"type": "number", "default": 0.4},
+            "education_count": {"type": "number", "default": 0.5},
+            "has_summary": {"type": "number", "default": 0.7},
+            "summary_length": {"type": "number", "default": 0.02},
+            "action_verb_count": {"type": "number", "default": 0.3},
+            "professional_email": {"type": "number", "default": 0.5},
+            "has_linkedin": {"type": "number", "default": 0.3},
+            "recent_experience": {"type": "number", "default": 0.8}
+          }
+        },
+        "normalization_method": {
+          "type": "string",
+          "enum": ["z_score", "min_max", "robust"],
+          "default": "min_max"
+        },
+        "confidence_threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.7
+        }
+      }
+    },
+    "industry_adjustments": {
+      "type": "object",
+      "patternProperties": {
+        "^(technology|finance|healthcare|marketing|sales)$": {
+          "type": "object",
+          "properties": {
+            "weight_modifiers": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z_]+$": {
+                  "type": "number",
+                  "minimum": 0.1,
+                  "maximum": 2.0
+                }
+              }
+            },
+            "required_elements": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Elements required for this industry"
+            },
+            "bonus_elements": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Elements that provide bonus points"
+            },
+            "penalty_elements": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Elements that reduce score if missing"
+            }
+          }
+        }
+      }
+    },
+    "level_adjustments": {
+      "type": "object",
+      "properties": {
+        "entry_level": {
+          "type": "object",
+          "properties": {
+            "weight_increases": {
+              "type": "object",
+              "properties": {
+                "education": {"type": "number", "minimum": 1, "default": 1.3},
+                "potential_indicators": {"type": "number", "minimum": 1, "default": 1.2},
+                "learning_agility": {"type": "number", "minimum": 1, "default": 1.1}
+              }
+            },
+            "reduced_expectations": {
+              "type": "object",
+              "properties": {
+                "years_experience": {"type": "number", "maximum": 1, "default": 0.3},
+                "leadership_experience": {"type": "number", "maximum": 1, "default": 0.2},
+                "achievement_magnitude": {"type": "number", "maximum": 1, "default": 0.4}
+              }
+            }
+          }
+        },
+        "senior_level": {
+          "type": "object",
+          "properties": {
+            "weight_increases": {
+              "type": "object",
+              "properties": {
+                "leadership_experience": {"type": "number", "minimum": 1, "default": 1.4},
+                "strategic_thinking": {"type": "number", "minimum": 1, "default": 1.3},
+                "business_impact": {"type": "number", "minimum": 1, "default": 1.3}
+              }
+            },
+            "elevated_expectations": {
+              "type": "object",
+              "properties": {
+                "achievement_magnitude": {"type": "number", "minimum": 1, "default": 1.5},
+                "team_impact": {"type": "number", "minimum": 1, "default": 1.4}
+              }
+            }
+          }
+        },
+        "executive_level": {
+          "type": "object",
+          "properties": {
+            "weight_increases": {
+              "type": "object",
+              "properties": {
+                "strategic_leadership": {"type": "number", "minimum": 1, "default": 1.5},
+                "business_transformation": {"type": "number", "minimum": 1, "default": 1.4},
+                "organizational_impact": {"type": "number", "minimum": 1, "default": 1.4}
+              }
+            },
+            "elevated_expectations": {
+              "type": "object",
+              "properties": {
+                "achievement_magnitude": {"type": "number", "minimum": 1, "default": 2.0},
+                "market_impact": {"type": "number", "minimum": 1, "default": 1.8}
+              }
+            }
+          }
+        }
+      }
+    },
+    "output_format": {
+      "type": "object",
+      "properties": {
+        "include_percentile": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include percentile ranking"
+        },
+        "include_grade": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include letter grade"
+        },
+        "include_benchmark": {
+          "type": "boolean",
+          "default": false,
+          "description": "Include industry benchmark comparison"
+        },
+        "detailed_breakdown": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include detailed scoring breakdown"
+        },
+        "recommendations": {
+          "type": "object",
+          "properties": {
+            "include": {"type": "boolean", "default": true},
+            "max_count": {"type": "integer", "minimum": 1, "maximum": 10, "default": 5},
+            "priority_filter": {
+              "type": "array",
+              "items": {"type": "string", "enum": ["high", "medium", "low"]},
+              "default": ["high", "medium"]
+            }
+          }
+        },
+        "strengths_weaknesses": {
+          "type": "object",
+          "properties": {
+            "include": {"type": "boolean", "default": true},
+            "max_each": {"type": "integer", "minimum": 1, "maximum": 5, "default": 3}
+          }
+        }
+      }
+    },
+    "validation_rules": {
+      "type": "object",
+      "properties": {
+        "minimum_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "default": 0,
+          "description": "Minimum possible score"
+        },
+        "maximum_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "default": 100,
+          "description": "Maximum possible score"
+        },
+        "required_sections": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": ["personal", "experience"],
+          "description": "Sections required for scoring"
+        },
+        "scoring_precision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3,
+          "default": 2,
+          "description": "Decimal places for score precision"
+        },
+        "confidence_calculation": {
+          "type": "boolean",
+          "default": true,
+          "description": "Calculate confidence scores"
+        }
+      }
+    },
+    "benchmark_data": {
+      "type": "object",
+      "properties": {
+        "industry_percentiles": {
+          "type": "object",
+          "patternProperties": {
+            "^(technology|finance|healthcare|marketing|sales|general)$": {
+              "type": "object",
+              "patternProperties": {
+                "^(entry|mid|senior|executive)$": {
+                  "type": "object",
+                  "properties": {
+                    "25th": {"type": "number", "minimum": 0, "maximum": 100},
+                    "50th": {"type": "number", "minimum": 0, "maximum": 100},
+                    "75th": {"type": "number", "minimum": 0, "maximum": 100},
+                    "90th": {"type": "number", "minimum": 0, "maximum": 100},
+                    "95th": {"type": "number", "minimum": 0, "maximum": 100}
+                  },
+                  "required": ["50th", "75th", "90th"]
+                }
+              }
+            }
+          }
+        },
+        "grade_thresholds": {
+          "type": "object",
+          "patternProperties": {
+            "^(A\\+|A|A-|B\\+|B|B-|C\\+|C|C-|D|F)$": {
+              "type": "object",
+              "properties": {
+                "min_score": {"type": "number", "minimum": 0, "maximum": 100},
+                "description": {"type": "string"}
+              },
+              "required": ["min_score", "description"]
+            }
+          }
+        }
+      }
+    },
+    "scoring_metadata": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Scoring algorithm version"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last update timestamp"
+        },
+        "calibration_data": {
+          "type": "object",
+          "properties": {
+            "sample_size": {"type": "integer", "minimum": 0},
+            "mean_score": {"type": "number", "minimum": 0, "maximum": 100},
+            "standard_deviation": {"type": "number", "minimum": 0},
+            "score_distribution": {
+              "type": "object",
+              "properties": {
+                "excellent": {"type": "number", "minimum": 0, "maximum": 1},
+                "good": {"type": "number", "minimum": 0, "maximum": 1},
+                "average": {"type": "number", "minimum": 0, "maximum": 1},
+                "poor": {"type": "number", "minimum": 0, "maximum": 1}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["scoring_config"],
+  "additionalProperties": false,
+  "definitions": {
+    "score_range": {
+      "type": "object",
+      "properties": {
+        "min": {"type": "number", "minimum": 0, "maximum": 100},
+        "max": {"type": "number", "minimum": 0, "maximum": 100}
+      },
+      "required": ["min", "max"]
+    },
+    "weight_value": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Weight value between 0 and 1"
+    },
+    "scoring_level": {
+      "type": "string",
+      "enum": ["excellent", "good", "satisfactory", "needs_improvement", "poor"]
+    },
+    "priority_level": {
+      "type": "string",
+      "enum": ["critical", "high", "medium", "low"]
+    },
+    "industry_type": {
+      "type": "string",
+      "enum": ["technology", "finance", "healthcare", "marketing", "sales", "general"]
+    },
+    "position_level": {
+      "type": "string",
+      "enum": ["entry", "mid", "senior", "executive"]
+    }
+  }
+}
