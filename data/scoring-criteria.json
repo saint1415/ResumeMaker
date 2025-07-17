@@ -1,0 +1,760 @@
+{
+  "scoring_rubrics": {
+    "general": {
+      "contact_completeness": {
+        "category": "essential",
+        "weight": 0.15,
+        "criteria": {
+          "excellent": {
+            "score_range": [90, 100],
+            "requirements": [
+              "Name, email, phone present",
+              "Professional email address",
+              "LinkedIn profile included",
+              "Location or willingness to relocate specified",
+              "Additional relevant contact method (portfolio, GitHub)"
+            ]
+          },
+          "good": {
+            "score_range": [75, 89],
+            "requirements": [
+              "Name, email, phone present",
+              "Professional contact information",
+              "At least one additional professional contact method"
+            ]
+          },
+          "satisfactory": {
+            "score_range": [60, 74],
+            "requirements": [
+              "Name and email present",
+              "Phone number included",
+              "Contact information is functional"
+            ]
+          },
+          "needs_improvement": {
+            "score_range": [40, 59],
+            "requirements": [
+              "Name and email present",
+              "Missing critical contact information"
+            ]
+          },
+          "poor": {
+            "score_range": [0, 39],
+            "requirements": [
+              "Missing essential contact information",
+              "Unprofessional email address",
+              "Incomplete or non-functional contact details"
+            ]
+          }
+        }
+      },
+      "experience_quality": {
+        "category": "essential",
+        "weight": 0.25,
+        "criteria": {
+          "excellent": {
+            "score_range": [90, 100],
+            "requirements": [
+              "3+ relevant positions listed",
+              "Each position includes company, title, dates, achievements",
+              "Quantifiable results in 70%+ of achievements",
+              "Clear career progression demonstrated",
+              "Recent experience within 2 years"
+            ]
+          },
+          "good": {
+            "score_range": [75, 89],
+            "requirements": [
+              "2+ relevant positions listed",
+              "Complete information for each position",
+              "Some quantifiable achievements",
+              "Logical career progression"
+            ]
+          },
+          "satisfactory": {
+            "score_range": [60, 74],
+            "requirements": [
+              "1-2 positions listed",
+              "Basic job information provided",
+              "Some achievements or responsibilities listed"
+            ]
+          },
+          "needs_improvement": {
+            "score_range": [40, 59],
+            "requirements": [
+              "Limited work experience",
+              "Incomplete job information",
+              "Vague or generic descriptions"
+            ]
+          },
+          "poor": {
+            "score_range": [0, 39],
+            "requirements": [
+              "No work experience listed",
+              "Extremely limited or irrelevant experience",
+              "Missing critical job details"
+            ]
+          }
+        }
+      },
+      "skills_relevance": {
+        "category": "important",
+        "weight": 0.20,
+        "criteria": {
+          "excellent": {
+            "score_range": [90, 100],
+            "requirements": [
+              "15+ relevant skills listed",
+              "Skills organized into 3+ logical categories",
+              "Mix of technical and soft skills",
+              "Industry-specific skills prominently featured",
+              "Skills align with job requirements"
+            ]
+          },
+          "good": {
+            "score_range": [75, 89],
+            "requirements": [
+              "10+ relevant skills listed",
+              "Skills well-organized",
+              "Good balance of skill types",
+              "Most skills relevant to target role"
+            ]
+          },
+          "satisfactory": {
+            "score_range": [60, 74],
+            "requirements": [
+              "5-9 skills listed",
+              "Skills somewhat organized",
+              "Some relevant skills present"
+            ]
+          },
+          "needs_improvement": {
+            "score_range": [40, 59],
+            "requirements": [
+              "Few skills listed",
+              "Limited relevance to target role",
+              "Poor organization or presentation"
+            ]
+          },
+          "poor": {
+            "score_range": [0, 39],
+            "requirements": [
+              "No skills section",
+              "Irrelevant or outdated skills only",
+              "Skills poorly presented"
+            ]
+          }
+        }
+      },
+      "achievement_quantification": {
+        "category": "important",
+        "weight": 0.20,
+        "criteria": {
+          "excellent": {
+            "score_range": [90, 100],
+            "requirements": [
+              "80%+ achievements include specific metrics",
+              "Clear impact demonstrated with numbers",
+              "Variety of quantification types (%, $, time, volume)",
+              "Results clearly attributable to candidate",
+              "Achievements are impressive and relevant"
+            ]
+          },
+          "good": {
+            "score_range": [75, 89],
+            "requirements": [
+              "50%+ achievements include metrics",
+              "Good use of numbers and percentages",
+              "Clear impact demonstrated",
+              "Most achievements are relevant"
+            ]
+          },
+          "satisfactory": {
+            "score_range": [60, 74],
+            "requirements": [
+              "Some achievements include metrics",
+              "Basic quantification present",
+              "Some impact demonstrated"
+            ]
+          },
+          "needs_improvement": {
+            "score_range": [40, 59],
+            "requirements": [
+              "Few quantified achievements",
+              "Vague or generic accomplishments",
+              "Limited evidence of impact"
+            ]
+          },
+          "poor": {
+            "score_range": [0, 39],
+            "requirements": [
+              "No quantified achievements",
+              "Only job duties listed",
+              "No evidence of impact or results"
+            ]
+          }
+        }
+      },
+      "education_appropriateness": {
+        "category": "desirable",
+        "weight": 0.10,
+        "criteria": {
+          "excellent": {
+            "score_range": [90, 100],
+            "requirements": [
+              "Relevant degree for target role",
+              "Strong academic performance (GPA 3.5+)",
+              "Additional certifications or training",
+              "Relevant coursework or projects mentioned",
+              "Academic honors or achievements"
+            ]
+          },
+          "good": {
+            "score_range": [75, 89],
+            "requirements": [
+              "Relevant degree present",
+              "Good academic performance or relevant experience",
+              "Some additional training or certifications"
+            ]
+          },
+          "satisfactory": {
+            "score_range": [60, 74],
+            "requirements": [
+              "Degree present (may not be directly relevant)",
+              "Basic educational requirements met"
+            ]
+          },
+          "needs_improvement": {
+            "score_range": [40, 59],
+            "requirements": [
+              "Limited or irrelevant education",
+              "Education doesn't support career goals"
+            ]
+          },
+          "poor": {
+            "score_range": [0, 39],
+            "requirements": [
+              "No education listed when required",
+              "Significantly inadequate educational background"
+            ]
+          }
+        }
+      },
+      "language_professionalism": {
+        "category": "desirable",
+        "weight": 0.10,
+        "criteria": {
+          "excellent": {
+            "score_range": [90, 100],
+            "requirements": [
+              "Consistently professional tone",
+              "Strong action verbs throughout",
+              "Clear, concise language",
+              "Industry-appropriate terminology",
+              "Error-free grammar and spelling"
+            ]
+          },
+          "good": {
+            "score_range": [75, 89],
+            "requirements": [
+              "Generally professional tone",
+              "Good use of action verbs",
+              "Clear language with minor issues",
+              "Appropriate vocabulary"
+            ]
+          },
+          "satisfactory": {
+            "score_range": [60, 74],
+            "requirements": [
+              "Acceptable professional tone",
+              "Some action verbs used",
+              "Understandable language"
+            ]
+          },
+          "needs_improvement": {
+            "score_range": [40, 59],
+            "requirements": [
+              "Inconsistent tone",
+              "Limited use of strong language",
+              "Some clarity issues"
+            ]
+          },
+          "poor": {
+            "score_range": [0, 39],
+            "requirements": [
+              "Unprofessional language",
+              "Poor grammar or spelling",
+              "Unclear or confusing content"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "industry_specific_criteria": {
+    "technology": {
+      "technical_skills_depth": {
+        "category": "essential",
+        "weight": 0.30,
+        "criteria": {
+          "excellent": {
+            "requirements": [
+              "Current, in-demand programming languages",
+              "Full-stack or specialized expertise demonstrated",
+              "Modern frameworks and tools",
+              "Cloud platform experience",
+              "Version control and collaboration tools"
+            ]
+          },
+          "good": {
+            "requirements": [
+              "Solid programming language skills",
+              "Some framework experience",
+              "Basic modern development tools",
+              "Some cloud or modern architecture exposure"
+            ]
+          },
+          "satisfactory": {
+            "requirements": [
+              "Basic programming skills",
+              "Some relevant technical skills",
+              "Fundamental development tools"
+            ]
+          }
+        }
+      },
+      "project_portfolio": {
+        "category": "important",
+        "weight": 0.20,
+        "criteria": {
+          "excellent": {
+            "requirements": [
+              "3+ substantial projects showcased",
+              "Projects demonstrate technical depth",
+              "Live demos or GitHub repositories linked",
+              "Clear project descriptions and technologies used",
+              "Projects show progression in complexity"
+            ]
+          },
+          "good": {
+            "requirements": [
+              "2+ projects showcased",
+              "Projects demonstrate relevant skills",
+              "Some code samples or demos available",
+              "Good project descriptions"
+            ]
+          },
+          "satisfactory": {
+            "requirements": [
+              "1-2 projects mentioned",
+              "Basic project information provided",
+              "Some technical details included"
+            ]
+          }
+        }
+      }
+    },
+    "finance": {
+      "quantitative_skills": {
+        "category": "essential",
+        "weight": 0.25,
+        "criteria": {
+          "excellent": {
+            "requirements": [
+              "Advanced Excel/modeling skills",
+              "Statistical analysis experience",
+              "Financial software proficiency (Bloomberg, FactSet)",
+              "Programming skills (Python, R, SQL)",
+              "Quantitative achievements demonstrated"
+            ]
+          },
+          "good": {
+            "requirements": [
+              "Strong Excel skills",
+              "Some analytical software experience",
+              "Basic programming or database skills",
+              "Quantitative analysis experience"
+            ]
+          },
+          "satisfactory": {
+            "requirements": [
+              "Basic Excel and analysis skills",
+              "Some quantitative work experience",
+              "Financial analysis fundamentals"
+            ]
+          }
+        }
+      },
+      "regulatory_knowledge": {
+        "category": "important",
+        "weight": 0.15,
+        "criteria": {
+          "excellent": {
+            "requirements": [
+              "Deep regulatory framework knowledge",
+              "Compliance experience across multiple areas",
+              "Risk management expertise",
+              "Audit and control experience"
+            ]
+          },
+          "good": {
+            "requirements": [
+              "Good regulatory awareness",
+              "Some compliance experience",
+              "Basic risk management knowledge"
+            ]
+          },
+          "satisfactory": {
+            "requirements": [
+              "Basic regulatory awareness",
+              "Some exposure to compliance requirements"
+            ]
+          }
+        }
+      }
+    },
+    "healthcare": {
+      "clinical_competency": {
+        "category": "essential",
+        "weight": 0.30,
+        "criteria": {
+          "excellent": {
+            "requirements": [
+              "Board certifications in relevant specialty",
+              "Current medical licenses",
+              "Specialized training or fellowships",
+              "Clinical research or publication experience",
+              "Quality improvement initiatives"
+            ]
+          },
+          "good": {
+            "requirements": [
+              "Relevant medical education and training",
+              "Current certifications and licenses",
+              "Clinical experience in relevant areas",
+              "Some specialized training"
+            ]
+          },
+          "satisfactory": {
+            "requirements": [
+              "Basic medical education",
+              "Required licenses and certifications",
+              "Clinical experience"
+            ]
+          }
+        }
+      },
+      "technology_integration": {
+        "category": "important",
+        "weight": 0.15,
+        "criteria": {
+          "excellent": {
+            "requirements": [
+              "EMR/EHR system expertise",
+              "Health informatics knowledge",
+              "Telemedicine experience",
+              "Healthcare technology implementation",
+              "Data analysis in healthcare settings"
+            ]
+          },
+          "good": {
+            "requirements": [
+              "EMR/EHR experience",
+              "Some healthcare technology use",
+              "Basic health informatics understanding"
+            ]
+          },
+          "satisfactory": {
+            "requirements": [
+              "Basic EMR/EHR use",
+              "Some technology integration experience"
+            ]
+          }
+        }
+      }
+    },
+    "marketing": {
+      "digital_proficiency": {
+        "category": "essential",
+        "weight": 0.25,
+        "criteria": {
+          "excellent": {
+            "requirements": [
+              "Multi-channel digital marketing expertise",
+              "Analytics and measurement proficiency",
+              "Marketing automation experience",
+              "SEO/SEM and social media advertising",
+              "Content strategy and creation skills"
+            ]
+          },
+          "good": {
+            "requirements": [
+              "Digital marketing experience across channels",
+              "Analytics tools proficiency",
+              "Some automation and optimization experience",
+              "Content creation skills"
+            ]
+          },
+          "satisfactory": {
+            "requirements": [
+              "Basic digital marketing skills",
+              "Some analytics experience",
+              "Content creation or social media experience"
+            ]
+          }
+        }
+      },
+      "creative_strategy": {
+        "category": "important",
+        "weight": 0.20,
+        "criteria": {
+          "excellent": {
+            "requirements": [
+              "Campaign strategy development",
+              "Brand positioning and messaging",
+              "Creative brief development",
+              "Cross-functional collaboration",
+              "Results-driven creative thinking"
+            ]
+          },
+          "good": {
+            "requirements": [
+              "Campaign development experience",
+              "Brand and messaging work",
+              "Creative collaboration",
+              "Strategic thinking demonstrated"
+            ]
+          },
+          "satisfactory": {
+            "requirements": [
+              "Basic campaign or creative experience",
+              "Some strategic thinking",
+              "Collaboration with creative teams"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "position_level_adjustments": {
+    "entry_level": {
+      "weight_adjustments": {
+        "education": 1.3,
+        "potential_indicators": 1.2,
+        "internship_experience": 1.4,
+        "academic_projects": 1.2,
+        "learning_agility": 1.1
+      },
+      "reduced_expectations": {
+        "years_experience": 0.3,
+        "leadership_experience": 0.2,
+        "achievement_magnitude": 0.4
+      }
+    },
+    "mid_level": {
+      "weight_adjustments": {
+        "relevant_experience": 1.2,
+        "skill_progression": 1.1,
+        "project_ownership": 1.2,
+        "collaboration": 1.1
+      },
+      "standard_expectations": {
+        "years_experience": 1.0,
+        "achievement_scope": 1.0,
+        "technical_depth": 1.0
+      }
+    },
+    "senior_level": {
+      "weight_adjustments": {
+        "leadership_experience": 1.4,
+        "strategic_thinking": 1.3,
+        "mentoring": 1.2,
+        "business_impact": 1.3,
+        "innovation": 1.1
+      },
+      "elevated_expectations": {
+        "achievement_magnitude": 1.5,
+        "team_impact": 1.4,
+        "industry_recognition": 1.2
+      }
+    },
+    "executive_level": {
+      "weight_adjustments": {
+        "strategic_leadership": 1.5,
+        "business_transformation": 1.4,
+        "stakeholder_management": 1.3,
+        "vision_setting": 1.3,
+        "organizational_impact": 1.4
+      },
+      "elevated_expectations": {
+        "achievement_magnitude": 2.0,
+        "market_impact": 1.8,
+        "thought_leadership": 1.5
+      }
+    }
+  },
+  "scoring_benchmarks": {
+    "percentile_thresholds": {
+      "technology": {
+        "entry": { "50th": 72, "75th": 84, "90th": 92, "95th": 96 },
+        "mid": { "50th": 76, "75th": 87, "90th": 94, "95th": 97 },
+        "senior": { "50th": 80, "75th": 90, "90th": 96, "95th": 98 },
+        "executive": { "50th": 85, "75th": 93, "90th": 97, "95th": 99 }
+      },
+      "finance": {
+        "entry": { "50th": 74, "75th": 86, "90th": 93, "95th": 97 },
+        "mid": { "50th": 78, "75th": 89, "90th": 95, "95th": 98 },
+        "senior": { "50th": 82, "75th": 92, "90th": 97, "95th": 99 },
+        "executive": { "50th": 87, "75th": 95, "90th": 98, "95th": 99 }
+      },
+      "healthcare": {
+        "entry": { "50th": 71, "75th": 83, "90th": 91, "95th": 95 },
+        "mid": { "50th": 75, "75th": 86, "90th": 93, "95th": 97 },
+        "senior": { "50th": 79, "75th": 89, "90th": 95, "95th": 98 },
+        "executive": { "50th": 84, "75th": 92, "90th": 97, "95th": 99 }
+      },
+      "marketing": {
+        "entry": { "50th": 70, "75th": 82, "90th": 90, "95th": 94 },
+        "mid": { "50th": 74, "75th": 85, "90th": 92, "95th": 96 },
+        "senior": { "50th": 78, "75th": 88, "90th": 94, "95th": 97 },
+        "executive": { "50th": 83, "75th": 91, "90th": 96, "95th": 98 }
+      },
+      "general": {
+        "entry": { "50th": 68, "75th": 80, "90th": 88, "95th": 93 },
+        "mid": { "50th": 72, "75th": 83, "90th": 90, "95th": 95 },
+        "senior": { "50th": 76, "75th": 86, "90th": 92, "95th": 96 },
+        "executive": { "50th": 81, "75th": 89, "90th": 94, "95th": 97 }
+      }
+    },
+    "grade_thresholds": {
+      "A+": { "min": 97, "description": "Exceptional - Top 3% of resumes" },
+      "A": { "min": 93, "description": "Excellent - Top 10% of resumes" },
+      "A-": { "min": 90, "description": "Very Good - Top 20% of resumes" },
+      "B+": { "min": 87, "description": "Good - Top 30% of resumes" },
+      "B": { "min": 83, "description": "Above Average - Top 50% of resumes" },
+      "B-": { "min": 80, "description": "Satisfactory - Average resume" },
+      "C+": { "min": 77, "description": "Below Average - Needs improvement" },
+      "C": { "min": 73, "description": "Poor - Significant issues" },
+      "C-": { "min": 70, "description": "Very Poor - Major revision needed" },
+      "D": { "min": 60, "description": "Failing - Complete overhaul required" },
+      "F": { "min": 0, "description": "Unacceptable - Start over" }
+    }
+  },
+  "quality_indicators": {
+    "positive_signals": {
+      "achievement_quality": [
+        "Specific quantifiable results",
+        "Clear impact metrics",
+        "Before/after comparisons",
+        "ROI or business value demonstrated",
+        "Recognition or awards mentioned"
+      ],
+      "language_quality": [
+        "Strong action verbs",
+        "Industry-appropriate terminology",
+        "Concise, impactful statements",
+        "Professional tone throughout",
+        "Error-free grammar and spelling"
+      ],
+      "structure_quality": [
+        "Logical section organization",
+        "Consistent formatting",
+        "Appropriate length and detail",
+        "Easy to scan and read",
+        "ATS-friendly format"
+      ],
+      "content_relevance": [
+        "Skills match job requirements",
+        "Experience progression logical",
+        "Industry knowledge demonstrated",
+        "Current and relevant skills",
+        "Tailored to target role"
+      ]
+    },
+    "negative_signals": {
+      "content_issues": [
+        "Generic job descriptions",
+        "No quantifiable achievements",
+        "Outdated or irrelevant skills",
+        "Gaps in employment history",
+        "Inconsistent career progression"
+      ],
+      "presentation_issues": [
+        "Poor formatting or layout",
+        "Grammar or spelling errors",
+        "Unprofessional email address",
+        "Missing critical information",
+        "Inconsistent date formats"
+      ],
+      "language_issues": [
+        "Passive voice overuse",
+        "Weak or generic language",
+        "Buzzword overuse",
+        "Unclear or confusing statements",
+        "Inappropriate casual language"
+      ]
+    }
+  },
+  "improvement_priorities": {
+    "critical_fixes": {
+      "missing_contact": {
+        "priority": 1,
+        "impact": "high",
+        "effort": "low",
+        "description": "Add missing essential contact information"
+      },
+      "no_achievements": {
+        "priority": 1,
+        "impact": "high",
+        "effort": "medium",
+        "description": "Add specific, quantifiable achievements"
+      },
+      "formatting_issues": {
+        "priority": 2,
+        "impact": "medium",
+        "effort": "low",
+        "description": "Fix formatting and consistency issues"
+      }
+    },
+    "high_impact": {
+      "quantify_results": {
+        "priority": 3,
+        "impact": "high",
+        "effort": "medium",
+        "description": "Add specific numbers and metrics to achievements"
+      },
+      "skill_relevance": {
+        "priority": 4,
+        "impact": "high",
+        "effort": "low",
+        "description": "Align skills with target job requirements"
+      },
+      "professional_summary": {
+        "priority": 5,
+        "impact": "medium",
+        "effort": "medium",
+        "description": "Add compelling professional summary"
+      }
+    },
+    "polish_improvements": {
+      "action_verbs": {
+        "priority": 6,
+        "impact": "medium",
+        "effort": "low",
+        "description": "Strengthen language with better action verbs"
+      },
+      "keyword_optimization": {
+        "priority": 7,
+        "impact": "medium",
+        "effort": "medium",
+        "description": "Optimize for ATS and industry keywords"
+      },
+      "additional_sections": {
+        "priority": 8,
+        "impact": "low",
+        "effort": "medium",
+        "description": "Add relevant additional sections (projects, certifications)"
+      }
+    }
+  }
+}
