@@ -1,0 +1,481 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Industry Template Schema",
+  "description": "Schema for industry-specific resume templates and their configurations",
+  "type": "object",
+  "properties": {
+    "template_metadata": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Template display name"
+        },
+        "industry": {
+          "type": "string",
+          "enum": ["technology", "finance", "healthcare", "creative", "marketing", "sales", "education", "legal", "general"],
+          "description": "Primary industry focus"
+        },
+        "description": {
+          "type": "string",
+          "description": "Template description and use cases"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Template version"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last modification date"
+        },
+        "suitable_roles": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of roles this template is designed for"
+        },
+        "experience_levels": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["entry", "mid", "senior", "executive"]
+          },
+          "description": "Appropriate experience levels"
+        }
+      },
+      "required": ["name", "industry", "description", "suitable_roles"]
+    },
+    "visual_design": {
+      "type": "object",
+      "properties": {
+        "styles": {
+          "type": "object",
+          "properties": {
+            "primaryColor": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"},
+            "secondaryColor": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"},
+            "accentColor": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"},
+            "backgroundColor": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"},
+            "textColor": {"type": "string", "pattern": "^#[0-9A-Fa-f]{6}$"},
+            "headerFont": {"type": "string"},
+            "bodyFont": {"type": "string"},
+            "spacing": {"type": "string"},
+            "borderRadius": {"type": "string"}
+          },
+          "required": ["primaryColor", "textColor", "backgroundColor"]
+        },
+        "layout": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 3,
+              "description": "Number of layout columns"
+            },
+            "headerHeight": {"type": "string"},
+            "sectionSpacing": {"type": "string"},
+            "marginSize": {"type": "string"},
+            "pageBreaks": {"type": "string", "enum": ["auto", "manual", "avoid"]},
+            "responsiveDesign": {"type": "boolean", "default": false}
+          },
+          "required": ["columns"]
+        },
+        "visual_hierarchy": {
+          "type": "object",
+          "properties": {
+            "emphasis_style": {
+              "type": "string",
+              "enum": ["bold", "color", "size", "background"],
+              "default": "bold"
+            },
+            "section_separators": {
+              "type": "string",
+              "enum": ["lines", "spacing", "background", "borders"],
+              "default": "spacing"
+            },
+            "bullet_style": {
+              "type": "string",
+              "enum": ["standard", "custom", "none"],
+              "default": "standard"
+            }
+          }
+        }
+      },
+      "required": ["styles", "layout"]
+    },
+    "content_structure": {
+      "type": "object",
+      "properties": {
+        "sections": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z_]+$": {
+              "type": "object",
+              "properties": {
+                "order": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "description": "Section display order"
+                },
+                "fullWidth": {
+                  "type": "boolean",
+                  "description": "Whether section spans full width"
+                },
+                "column": {
+                  "type": "string",
+                  "enum": ["left", "right"],
+                  "description": "Column placement for multi-column layouts"
+                },
+                "title": {
+                  "type": "string",
+                  "description": "Section title display"
+                },
+                "style": {
+                  "type": "string",
+                  "description": "Section-specific styling approach"
+                },
+                "priority": {
+                  "type": "string",
+                  "enum": ["highest", "high", "medium", "low"],
+                  "description": "Section importance level"
+                },
+                "optional": {
+                  "type": "boolean",
+                  "default": false,
+                  "description": "Whether section is optional"
+                },
+                "fields": {
+                  "type": "array",
+                  "items": {"type": "string"},
+                  "description": "Required or recommended fields for this section"
+                },
+                "guidelines": {
+                  "type": "object",
+                  "properties": {
+                    "word_count": {"type": "string"},
+                    "focus": {"type": "string"},
+                    "tone": {"type": "string"},
+                    "emphasize": {"type": "string"},
+                    "quantify": {"type": "string"}
+                  }
+                },
+                "customization": {
+                  "type": "object",
+                  "description": "Section-specific customization options",
+                  "additionalProperties": true
+                }
+              },
+              "required": ["order"]
+            }
+          }
+        },
+        "section_categories": {
+          "type": "object",
+          "properties": {
+            "essential": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Essential sections that must be present"
+            },
+            "recommended": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Recommended sections for optimal impact"
+            },
+            "optional": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Optional sections based on individual needs"
+            },
+            "industry_specific": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Sections specific to this industry"
+            }
+          }
+        }
+      },
+      "required": ["sections"]
+    },
+    "industry_optimization": {
+      "type": "object",
+      "properties": {
+        "keywords": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Industry-relevant keywords to incorporate"
+        },
+        "keyword_density": {
+          "type": "string",
+          "enum": ["low", "medium", "high"],
+          "description": "Recommended keyword density level"
+        },
+        "compliance_requirements": {
+          "type": "object",
+          "description": "Industry-specific compliance considerations",
+          "additionalProperties": {"type": "boolean"}
+        },
+        "formatting_guidelines": {
+          "type": "object",
+          "properties": {
+            "date_format": {"type": "string"},
+            "number_formatting": {"type": "string"},
+            "currency_format": {"type": "string"},
+            "emphasis_style": {"type": "string"},
+            "professional_tone": {"type": "boolean"}
+          }
+        },
+        "ats_optimization": {
+          "type": "object",
+          "properties": {
+            "keywords_density": {"type": "string", "enum": ["low", "medium", "high"]},
+            "section_headers": {"type": "string", "enum": ["standard", "creative", "industry_specific"]},
+            "file_format": {"type": "string", "enum": ["pdf_preferred", "docx_acceptable", "txt_compatible"]},
+            "font_requirements": {"type": "string", "enum": ["standard", "professional", "creative"]}
+          }
+        }
+      },
+      "required": ["keywords"]
+    },
+    "role_specifications": {
+      "type": "object",
+      "properties": {
+        "customization_options": {
+          "type": "object",
+          "properties": {
+            "role_focus": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z_]+$": {
+                  "type": "object",
+                  "properties": {
+                    "emphasize": {
+                      "type": "array",
+                      "items": {"type": "string"},
+                      "description": "Elements to emphasize for this role"
+                    },
+                    "highlight_skills": {
+                      "type": "array",
+                      "items": {"type": "string"},
+                      "description": "Skills to highlight prominently"
+                    },
+                    "de_emphasize": {
+                      "type": "array",
+                      "items": {"type": "string"},
+                      "description": "Elements to de-emphasize"
+                    }
+                  }
+                }
+              }
+            },
+            "experience_level": {
+              "type": "object",
+              "properties": {
+                "entry": {
+                  "type": "object",
+                  "properties": {
+                    "emphasize": {"type": "array", "items": {"type": "string"}},
+                    "include": {"type": "array", "items": {"type": "string"}},
+                    "de_emphasize": {"type": "array", "items": {"type": "string"}}
+                  }
+                },
+                "mid": {
+                  "type": "object",
+                  "properties": {
+                    "emphasize": {"type": "array", "items": {"type": "string"}},
+                    "include": {"type": "array", "items": {"type": "string"}}
+                  }
+                },
+                "senior": {
+                  "type": "object",
+                  "properties": {
+                    "emphasize": {"type": "array", "items": {"type": "string"}},
+                    "include": {"type": "array", "items": {"type": "string"}}
+                  }
+                },
+                "executive": {
+                  "type": "object",
+                  "properties": {
+                    "emphasize": {"type": "array", "items": {"type": "string"}},
+                    "include": {"type": "array", "items": {"type": "string"}}
+                  }
+                }
+              }
+            }
+          }
+        },
+        "role_specific_variants": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z_]+$": {
+              "type": "object",
+              "properties": {
+                "required_sections": {
+                  "type": "array",
+                  "items": {"type": "string"},
+                  "description": "Sections required for this specific role"
+                },
+                "emphasized_skills": {
+                  "type": "array",
+                  "items": {"type": "string"},
+                  "description": "Skills to emphasize for this role"
+                },
+                "additional_sections": {
+                  "type": "array",
+                  "items": {"type": "string"},
+                  "description": "Additional sections beneficial for this role"
+                },
+                "section_weights": {
+                  "type": "object",
+                  "patternProperties": {
+                    "^[a-z_]+$": {"type": "number", "minimum": 0, "maximum": 1}
+                  },
+                  "description": "Relative importance weights for sections"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "template_features": {
+      "type": "object",
+      "properties": {
+        "special_features": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string"},
+              "description": {"type": "string"},
+              "enabled": {"type": "boolean", "default": false},
+              "configuration": {"type": "object"}
+            },
+            "required": ["name", "description"]
+          }
+        },
+        "integration_options": {
+          "type": "object",
+          "properties": {
+            "portfolio_integration": {"type": "boolean", "default": false},
+            "social_media_links": {"type": "boolean", "default": false},
+            "qr_code_support": {"type": "boolean", "default": false},
+            "video_resume_link": {"type": "boolean", "default": false},
+            "github_integration": {"type": "boolean", "default": false},
+            "linkedin_integration": {"type": "boolean", "default": false}
+          }
+        },
+        "accessibility": {
+          "type": "object",
+          "properties": {
+            "screen_reader_compatible": {"type": "boolean", "default": true},
+            "high_contrast_option": {"type": "boolean", "default": false},
+            "font_scaling_support": {"type": "boolean", "default": true},
+            "keyboard_navigation": {"type": "boolean", "default": true}
+          }
+        }
+      }
+    },
+    "validation_rules": {
+      "type": "object",
+      "properties": {
+        "content_validation": {
+          "type": "object",
+          "properties": {
+            "required_sections": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Sections that must be present for this template"
+            },
+            "minimum_content_length": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z_]+$": {"type": "integer", "minimum": 0}
+              },
+              "description": "Minimum content length requirements by section"
+            },
+            "field_requirements": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-z_]+$": {
+                  "type": "object",
+                  "properties": {
+                    "required_fields": {"type": "array", "items": {"type": "string"}},
+                    "optional_fields": {"type": "array", "items": {"type": "string"}}
+                  }
+                }
+              }
+            }
+          }
+        },
+        "formatting_validation": {
+          "type": "object",
+          "properties": {
+            "max_pages": {"type": "integer", "minimum": 1, "maximum": 5},
+            "font_size_range": {
+              "type": "object",
+              "properties": {
+                "min": {"type": "number", "minimum": 8},
+                "max": {"type": "number", "maximum": 16}
+              }
+            },
+            "margin_requirements": {
+              "type": "object",
+              "properties": {
+                "min": {"type": "string"},
+                "max": {"type": "string"}
+              }
+            }
+          }
+        },
+        "industry_compliance": {
+          "type": "object",
+          "properties": {
+            "regulatory_requirements": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Industry-specific regulatory requirements"
+            },
+            "prohibited_content": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Content types to avoid for this industry"
+            },
+            "required_disclaimers": {
+              "type": "array",
+              "items": {"type": "string"},
+              "description": "Required legal or professional disclaimers"
+            }
+          }
+        }
+      }
+    },
+    "localization": {
+      "type": "object",
+      "properties": {
+        "supported_languages": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Languages this template supports"
+        },
+        "regional_variations": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "type": "object",
+              "properties": {
+                "date_format": {"type": "string"},
+                "address_format": {"type": "string"},
+                "phone_format": {"type": "string"},
+                "cultural_considerations": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["template_metadata", "visual_design", "content_structure", "industry_optimization"],
+  "additionalProperties": false
+}
