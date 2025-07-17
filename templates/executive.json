@@ -1,0 +1,59 @@
+{
+  "name": "Executive",
+  "description": "Senior-level professional format",
+  "styles": {
+    "primaryColor": "#1f2937",
+    "secondaryColor": "#4b5563",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1f2937",
+    "headerFont": "Georgia, serif",
+    "bodyFont": "Georgia, serif",
+    "spacing": "1.75rem",
+    "borderRadius": "0.25rem"
+  },
+  "layout": {
+    "columns": 2,
+    "headerHeight": "auto",
+    "sectionSpacing": "2rem",
+    "marginSize": "2rem"
+  },
+  "sections": {
+    "header": {
+      "order": 1,
+      "fullWidth": true,
+      "style": "executive",
+      "fields": ["name", "title", "contact"]
+    },
+    "summary": {
+      "order": 2,
+      "fullWidth": true,
+      "title": "Executive Summary",
+      "style": "paragraph"
+    },
+    "experience": {
+      "order": 3,
+      "column": "left",
+      "title": "Leadership Experience",
+      "style": "executive",
+      "dateFormat": "YYYY"
+    },
+    "achievements": {
+      "order": 4,
+      "column": "right",
+      "title": "Key Achievements",
+      "style": "bullets"
+    },
+    "education": {
+      "order": 5,
+      "column": "right",
+      "title": "Education",
+      "style": "compact"
+    },
+    "board": {
+      "order": 6,
+      "column": "right",
+      "title": "Board Positions",
+      "style": "list"
+    }
+  }
+}
