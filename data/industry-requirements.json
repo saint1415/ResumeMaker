@@ -1,0 +1,523 @@
+{
+  "industries": {
+    "technology": {
+      "core_requirements": {
+        "essential_sections": ["technical_skills", "professional_experience", "projects"],
+        "required_skills": ["programming_languages", "frameworks", "development_tools"],
+        "key_metrics": ["performance_improvements", "user_growth", "system_scalability"],
+        "preferred_formats": ["github_integration", "portfolio_links", "technical_blog"]
+      },
+      "roles": {
+        "software_engineer": {
+          "experience_expectations": {
+            "junior": "0-2 years, strong programming fundamentals",
+            "mid": "3-5 years, full-stack capabilities, project ownership",
+            "senior": "6+ years, system design, technical leadership",
+            "staff_principal": "8+ years, architectural decisions, cross-team impact"
+          },
+          "technical_requirements": {
+            "programming_languages": 3,
+            "frameworks": 2,
+            "databases": 1,
+            "cloud_platforms": 1
+          },
+          "portfolio_requirements": {
+            "github_profile": "required",
+            "personal_projects": 3,
+            "contribution_history": "preferred",
+            "technical_writing": "preferred"
+          }
+        },
+        "data_scientist": {
+          "experience_expectations": {
+            "junior": "0-2 years, ML fundamentals, statistical analysis",
+            "mid": "3-5 years, end-to-end ML projects, business impact",
+            "senior": "6+ years, ML strategy, team leadership"
+          },
+          "technical_requirements": {
+            "programming_languages": ["Python", "R", "SQL"],
+            "ml_frameworks": ["TensorFlow", "PyTorch", "Scikit-learn"],
+            "data_tools": ["Pandas", "NumPy", "Jupyter"],
+            "visualization": ["Matplotlib", "Seaborn", "Tableau"]
+          },
+          "portfolio_requirements": {
+            "kaggle_competitions": "preferred",
+            "research_papers": "preferred",
+            "data_projects": 2,
+            "github_portfolio": "required"
+          }
+        },
+        "product_manager": {
+          "experience_expectations": {
+            "junior": "0-2 years, product sense, analytical skills",
+            "mid": "3-5 years, product ownership, cross-functional leadership",
+            "senior": "6+ years, product strategy, organizational impact"
+          },
+          "core_skills": [
+            "product_strategy", "user_research", "data_analysis", 
+            "stakeholder_management", "agile_methodologies"
+          ],
+          "portfolio_requirements": {
+            "product_case_studies": 2,
+            "user_research_examples": "preferred",
+            "product_metrics": "required"
+          }
+        }
+      },
+      "industry_standards": {
+        "resume_length": "1-2 pages",
+        "technical_depth": "high",
+        "portfolio_prominence": "high",
+        "quantification_importance": "very_high",
+        "keywords_density": "high"
+      }
+    },
+    "finance": {
+      "core_requirements": {
+        "essential_sections": ["professional_experience", "education", "certifications"],
+        "required_skills": ["financial_analysis", "modeling", "regulatory_knowledge"],
+        "key_metrics": ["ROI", "AUM", "revenue_growth", "cost_savings", "performance"],
+        "preferred_formats": ["conservative_design", "quantified_results", "deal_experience"]
+      },
+      "roles": {
+        "investment_banker": {
+          "experience_expectations": {
+            "analyst": "0-3 years, financial modeling, deal support",
+            "associate": "3-6 years, client interaction, deal execution",
+            "vice_president": "6-10 years, client management, deal origination",
+            "director_md": "10+ years, business development, P&L ownership"
+          },
+          "technical_requirements": {
+            "financial_modeling": "advanced",
+            "valuation_methods": ["DCF", "LBO", "comparable_analysis"],
+            "software_proficiency": ["Excel/VBA", "Bloomberg", "Capital_IQ"],
+            "deal_experience": "required"
+          },
+          "education_requirements": {
+            "degree_level": "bachelor_minimum",
+            "preferred_fields": ["finance", "economics", "business", "engineering"],
+            "gpa_threshold": 3.5,
+            "target_schools": "preferred"
+          }
+        },
+        "portfolio_manager": {
+          "experience_expectations": {
+            "junior": "0-3 years, investment research, analysis support",
+            "senior": "3-8 years, portfolio responsibility, client interaction",
+            "managing_director": "8+ years, business development, team leadership"
+          },
+          "technical_requirements": {
+            "investment_analysis": "advanced",
+            "risk_management": "required",
+            "performance_attribution": "required",
+            "client_reporting": "required"
+          },
+          "certifications": {
+            "required": ["Series_7", "Series_66"],
+            "preferred": ["CFA", "CAIA", "FRM"]
+          }
+        },
+        "risk_manager": {
+          "experience_expectations": {
+            "analyst": "0-3 years, risk measurement, model validation",
+            "senior": "3-8 years, risk framework, regulatory reporting",
+            "director": "8+ years, risk strategy, organizational impact"
+          },
+          "technical_requirements": {
+            "quantitative_skills": "advanced",
+            "regulatory_knowledge": ["Basel_III", "Dodd_Frank", "CCAR"],
+            "risk_tools": ["VaR", "stress_testing", "scenario_analysis"]
+          }
+        }
+      },
+      "industry_standards": {
+        "resume_length": "1-2 pages",
+        "quantification_importance": "critical",
+        "education_prominence": "high",
+        "certifications_importance": "high",
+        "conservative_formatting": true
+      }
+    },
+    "healthcare": {
+      "core_requirements": {
+        "essential_sections": ["clinical_experience", "education", "licenses_certifications"],
+        "required_skills": ["patient_care", "clinical_knowledge", "regulatory_compliance"],
+        "key_metrics": ["patient_outcomes", "quality_metrics", "safety_indicators"],
+        "preferred_formats": ["professional_credentials", "patient_focus", "compliance_emphasis"]
+      },
+      "roles": {
+        "physician": {
+          "experience_expectations": {
+            "resident": "medical_school + residency",
+            "attending": "residency + board_certification",
+            "specialist": "fellowship + subspecialty_certification"
+          },
+          "education_requirements": {
+            "medical_degree": "required",
+            "residency": "required",
+            "fellowship": "specialty_dependent",
+            "board_certification": "required"
+          },
+          "licensing_requirements": {
+            "state_medical_license": "required",
+            "dea_license": "required",
+            "specialty_boards": "required",
+            "continuing_education": "ongoing"
+          }
+        },
+        "nurse": {
+          "experience_expectations": {
+            "new_graduate": "nursing_degree + NCLEX",
+            "experienced": "2+ years clinical experience",
+            "specialist": "specialty_certification + experience",
+            "advanced_practice": "graduate_degree + certification"
+          },
+          "education_requirements": {
+            "nursing_degree": "required",
+            "rn_license": "required",
+            "specialty_certification": "role_dependent"
+          },
+          "core_competencies": [
+            "patient_assessment", "medication_administration", 
+            "care_coordination", "patient_advocacy", "documentation"
+          ]
+        },
+        "healthcare_administrator": {
+          "experience_expectations": {
+            "coordinator": "0-3 years, operational support",
+            "manager": "3-7 years, departmental oversight",
+            "director": "7+ years, strategic leadership"
+          },
+          "education_requirements": {
+            "degree_level": "bachelor_minimum",
+            "preferred_fields": ["healthcare_administration", "business", "public_health"],
+            "advanced_degree": "preferred_for_senior_roles"
+          }
+        }
+      },
+      "industry_standards": {
+        "resume_length": "2-3 pages",
+        "credentials_prominence": "critical",
+        "patient_care_focus": "high",
+        "regulatory_compliance": "required",
+        "continuing_education": "emphasized"
+      }
+    },
+    "creative": {
+      "core_requirements": {
+        "essential_sections": ["portfolio", "creative_experience", "creative_skills"],
+        "required_skills": ["design_software", "creative_process", "visual_communication"],
+        "key_metrics": ["engagement_rates", "brand_impact", "user_satisfaction"],
+        "preferred_formats": ["portfolio_integration", "visual_appeal", "creative_showcase"]
+      },
+      "roles": {
+        "graphic_designer": {
+          "experience_expectations": {
+            "junior": "0-2 years, design fundamentals, software proficiency",
+            "mid": "3-5 years, client projects, brand development",
+            "senior": "6+ years, creative leadership, strategic thinking"
+          },
+          "technical_requirements": {
+            "design_software": ["Adobe_Creative_Suite", "Figma", "Sketch"],
+            "design_principles": "advanced",
+            "typography": "advanced",
+            "color_theory": "required"
+          },
+          "portfolio_requirements": {
+            "project_diversity": 5,
+            "client_work": "preferred",
+            "personal_projects": "included",
+            "process_documentation": "preferred"
+          }
+        },
+        "ui_ux_designer": {
+          "experience_expectations": {
+            "junior": "0-2 years, design tools, user research basics",
+            "mid": "3-5 years, end-to-end design, user testing",
+            "senior": "6+ years, design strategy, team leadership"
+          },
+          "technical_requirements": {
+            "design_tools": ["Figma", "Sketch", "Adobe_XD"],
+            "prototyping": "required",
+            "user_research": "required",
+            "usability_testing": "required"
+          },
+          "portfolio_requirements": {
+            "case_studies": 3,
+            "design_process": "documented",
+            "user_research": "included",
+            "before_after": "preferred"
+          }
+        },
+        "art_director": {
+          "experience_expectations": {
+            "associate": "3-5 years, campaign development, team collaboration",
+            "senior": "6-10 years, creative leadership, client management",
+            "executive": "10+ years, strategic vision, business development"
+          },
+          "leadership_requirements": {
+            "team_management": "required",
+            "creative_direction": "advanced",
+            "client_presentation": "required",
+            "strategic_thinking": "required"
+          }
+        }
+      },
+      "industry_standards": {
+        "resume_length": "1-2 pages",
+        "portfolio_prominence": "critical",
+        "visual_appeal": "high",
+        "creative_expression": "balanced",
+        "readability": "maintained"
+      }
+    },
+    "marketing": {
+      "core_requirements": {
+        "essential_sections": ["marketing_experience", "campaign_results", "digital_skills"],
+        "required_skills": ["digital_marketing", "analytics", "content_strategy"],
+        "key_metrics": ["conversion_rates", "engagement", "ROI", "brand_awareness", "lead_generation"],
+        "preferred_formats": ["campaign_showcase", "performance_metrics", "digital_proficiency"]
+      },
+      "roles": {
+        "digital_marketing_manager": {
+          "experience_expectations": {
+            "coordinator": "0-2 years, campaign execution, analytics basics",
+            "specialist": "2-4 years, channel expertise, campaign optimization",
+            "manager": "4-7 years, strategy development, team leadership",
+            "director": "7+ years, integrated strategies, business impact"
+          },
+          "technical_requirements": {
+            "platforms": ["Google_Ads", "Facebook_Ads", "LinkedIn_Ads"],
+            "analytics": ["Google_Analytics", "Adobe_Analytics", "HubSpot"],
+            "automation": ["Marketo", "Pardot", "Mailchimp"],
+            "content_tools": ["WordPress", "Canva", "Hootsuite"]
+          },
+          "core_competencies": [
+            "campaign_management", "seo_sem", "social_media_marketing",
+            "email_marketing", "content_marketing", "marketing_automation"
+          ]
+        },
+        "brand_manager": {
+          "experience_expectations": {
+            "associate": "0-3 years, brand support, market research",
+            "manager": "3-6 years, brand strategy, campaign development",
+            "senior": "6+ years, brand leadership, cross-functional management"
+          },
+          "core_skills": [
+            "brand_strategy", "market_research", "campaign_development",
+            "stakeholder_management", "creative_direction", "budget_management"
+          ]
+        },
+        "content_marketing_manager": {
+          "experience_expectations": {
+            "specialist": "0-3 years, content creation, editorial calendar",
+            "manager": "3-6 years, content strategy, team management",
+            "director": "6+ years, content vision, organizational impact"
+          },
+          "technical_requirements": {
+            "cms_platforms": ["WordPress", "Drupal", "HubSpot"],
+            "design_tools": ["Canva", "Adobe_Creative", "Figma"],
+            "analytics": ["Google_Analytics", "SEMrush", "Ahrefs"],
+            "automation": ["Buffer", "Hootsuite", "Sprout_Social"]
+          }
+        }
+      },
+      "industry_standards": {
+        "resume_length": "1-2 pages",
+        "metrics_emphasis": "high",
+        "digital_focus": "critical",
+        "campaign_showcase": "important",
+        "analytics_proficiency": "required"
+      }
+    },
+    "sales": {
+      "core_requirements": {
+        "essential_sections": ["sales_experience", "performance_metrics", "client_management"],
+        "required_skills": ["relationship_building", "negotiation", "pipeline_management"],
+        "key_metrics": ["quota_attainment", "revenue_growth", "conversion_rates", "client_retention"],
+        "preferred_formats": ["performance_focus", "achievement_emphasis", "client_results"]
+      },
+      "roles": {
+        "account_executive": {
+          "experience_expectations": {
+            "sdr_bdr": "0-2 years, prospecting, lead qualification",
+            "ae": "2-5 years, deal closure, account management",
+            "senior_ae": "5-8 years, strategic accounts, team mentoring",
+            "sales_manager": "8+ years, team leadership, territory management"
+          },
+          "performance_requirements": {
+            "quota_attainment": "100%+ consistently",
+            "pipeline_management": "3x_coverage",
+            "deal_size": "increasing_trajectory",
+            "sales_cycle": "optimization_demonstrated"
+          },
+          "technical_requirements": {
+            "crm_systems": ["Salesforce", "HubSpot", "Pipedrive"],
+            "sales_tools": ["Outreach", "SalesLoft", "LinkedIn_Sales_Navigator"],
+            "analytics": ["sales_reporting", "pipeline_analysis", "forecasting"]
+          }
+        },
+        "business_development": {
+          "experience_expectations": {
+            "associate": "0-3 years, prospect research, partnership support",
+            "manager": "3-6 years, partnership development, deal negotiation",
+            "director": "6+ years, strategic partnerships, business growth"
+          },
+          "core_skills": [
+            "partnership_development", "strategic_thinking", "market_analysis",
+            "contract_negotiation", "relationship_management", "business_strategy"
+          ]
+        }
+      },
+      "industry_standards": {
+        "resume_length": "1-2 pages",
+        "numbers_emphasis": "critical",
+        "achievement_focus": "high",
+        "client_focus": "important",
+        "growth_trajectory": "demonstrated"
+      }
+    }
+  },
+  "cross_industry_standards": {
+    "resume_length": {
+      "entry_level": "1 page preferred",
+      "mid_level": "1-2 pages",
+      "senior_level": "2 pages maximum",
+      "executive": "2-3 pages acceptable"
+    },
+    "essential_sections": {
+      "all_industries": ["contact_information", "professional_experience"],
+      "most_industries": ["education", "skills"],
+      "optional_common": ["certifications", "awards", "publications"]
+    },
+    "formatting_standards": {
+      "font_size": "10-12pt",
+      "margins": "0.5-1 inch",
+      "line_spacing": "1.0-1.15",
+      "file_format": "PDF preferred",
+      "file_size": "under_1MB"
+    }
+  },
+  "template_selection_criteria": {
+    "industry_match": {
+      "weight": 0.4,
+      "factors": ["industry_keywords", "section_priorities", "formatting_style", "visual_approach"]
+    },
+    "role_alignment": {
+      "weight": 0.3,
+      "factors": ["required_sections", "skill_emphasis", "experience_format", "achievement_focus"]
+    },
+    "experience_level": {
+      "weight": 0.2,
+      "factors": ["section_weighting", "content_depth", "leadership_emphasis", "education_prominence"]
+    },
+    "personal_preference": {
+      "weight": 0.1,
+      "factors": ["visual_style", "color_scheme", "layout_preference", "creative_expression"]
+    }
+  },
+  "industry_keyword_density": {
+    "technology": {
+      "technical_terms": "high",
+      "programming_languages": "prominent",
+      "frameworks_tools": "detailed",
+      "methodologies": "included"
+    },
+    "finance": {
+      "financial_terminology": "high",
+      "quantitative_metrics": "prominent",
+      "regulatory_terms": "included",
+      "analytical_skills": "emphasized"
+    },
+    "healthcare": {
+      "clinical_terminology": "appropriate",
+      "patient_care_focus": "emphasized",
+      "regulatory_compliance": "included",
+      "quality_metrics": "highlighted"
+    },
+    "creative": {
+      "design_terminology": "balanced",
+      "creative_process": "explained",
+      "software_proficiency": "detailed",
+      "visual_impact": "demonstrated"
+    },
+    "marketing": {
+      "digital_marketing": "prominent",
+      "analytics_terms": "included",
+      "campaign_terminology": "detailed",
+      "performance_metrics": "emphasized"
+    },
+    "sales": {
+      "sales_terminology": "natural",
+      "performance_metrics": "prominent",
+      "relationship_terms": "included",
+      "business_impact": "emphasized"
+    }
+  },
+  "compliance_considerations": {
+    "healthcare": {
+      "hipaa_awareness": "required",
+      "patient_confidentiality": "maintained",
+      "regulatory_compliance": "demonstrated",
+      "continuing_education": "documented"
+    },
+    "finance": {
+      "regulatory_knowledge": "demonstrated",
+      "fiduciary_responsibility": "understood",
+      "compliance_training": "current",
+      "ethical_standards": "maintained"
+    },
+    "technology": {
+      "data_privacy": "considered",
+      "security_awareness": "demonstrated",
+      "intellectual_property": "respected",
+      "open_source": "attributed"
+    }
+  },
+  "geographic_considerations": {
+    "united_states": {
+      "resume_vs_cv": "resume",
+      "personal_information": "minimal",
+      "photo_inclusion": "not_recommended",
+      "references": "upon_request"
+    },
+    "european_union": {
+      "cv_format": "acceptable",
+      "personal_details": "more_detailed",
+      "photo_inclusion": "optional",
+      "gdpr_compliance": "required"
+    },
+    "asia_pacific": {
+      "format_variation": "country_specific",
+      "personal_information": "detailed",
+      "photo_inclusion": "often_expected",
+      "cultural_adaptation": "important"
+    }
+  },
+  "emerging_trends": {
+    "ai_optimization": {
+      "ats_compatibility": "critical",
+      "keyword_optimization": "sophisticated",
+      "structured_data": "preferred",
+      "machine_readability": "enhanced"
+    },
+    "remote_work": {
+      "digital_collaboration": "emphasized",
+      "remote_experience": "highlighted",
+      "virtual_leadership": "demonstrated",
+      "technology_proficiency": "detailed"
+    },
+    "sustainability_focus": {
+      "environmental_awareness": "valued",
+      "sustainable_practices": "highlighted",
+      "social_responsibility": "demonstrated",
+      "ethical_considerations": "included"
+    },
+    "diversity_inclusion": {
+      "inclusive_language": "used",
+      "diverse_experiences": "valued",
+      "cultural_competency": "highlighted",
+      "accessibility": "considered"
+    }
+  }
+}
