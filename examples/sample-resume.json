@@ -1,0 +1,96 @@
+{
+  "personal": {
+    "name": "John Smith",
+    "title": "Software Engineer",
+    "email": "john.smith@email.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "San Francisco, CA",
+    "website": "https://johnsmith.dev",
+    "linkedin": "linkedin.com/in/johnsmith",
+    "github": "github.com/johnsmith"
+  },
+  "summary": "Experienced software engineer with 5+ years developing scalable web applications. Specialized in React, Node.js, and cloud architecture. Proven track record of leading teams and delivering high-quality software solutions.",
+  "experience": [
+    {
+      "company": "Tech Corp",
+      "position": "Senior Software Engineer",
+      "location": "San Francisco, CA",
+      "startDate": "2022-01",
+      "endDate": "2024-12",
+      "current": false,
+      "description": "Led development of user-facing applications serving 1M+ users",
+      "achievements": [
+        "Reduced application load time by 40% through optimization",
+        "Mentored 3 junior developers",
+        "Implemented CI/CD pipeline reducing deployment time by 60%"
+      ]
+    },
+    {
+      "company": "StartupXYZ",
+      "position": "Full Stack Developer",
+      "location": "Remote",
+      "startDate": "2020-03",
+      "endDate": "2021-12",
+      "current": false,
+      "description": "Built and maintained full-stack applications using React and Node.js",
+      "achievements": [
+        "Developed MVP that secured $2M in funding",
+        "Built responsive web application from scratch",
+        "Integrated third-party APIs and payment systems"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of California, Berkeley",
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "location": "Berkeley, CA",
+      "startDate": "2016-08",
+      "endDate": "2020-05",
+      "gpa": "3.8/4.0",
+      "honors": "Magna Cum Laude"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Programming Languages",
+      "items": ["JavaScript", "Python", "TypeScript", "Java"],
+      "level": "Advanced"
+    },
+    {
+      "category": "Frameworks & Libraries",
+      "items": ["React", "Node.js", "Express", "Next.js"],
+      "level": "Expert"
+    },
+    {
+      "category": "Tools & Technologies",
+      "items": ["AWS", "Docker", "Git", "MongoDB", "PostgreSQL"],
+      "level": "Proficient"
+    }
+  ],
+  "projects": [
+    {
+      "name": "E-commerce Platform",
+      "description": "Full-stack e-commerce application with payment integration",
+      "url": "https://github.com/johnsmith/ecommerce",
+      "technologies": ["React", "Node.js", "Stripe", "MongoDB"],
+      "date": "2023-06"
+    },
+    {
+      "name": "Task Management App",
+      "description": "Real-time collaborative task management tool",
+      "url": "https://taskapp.johnsmith.dev",
+      "technologies": ["Next.js", "Socket.io", "PostgreSQL"],
+      "date": "2023-03"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Developer",
+      "issuer": "Amazon Web Services",
+      "date": "2023-08",
+      "url": "https://aws.amazon.com/certification/"
+    }
+  ]
+}
