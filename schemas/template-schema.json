@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "name": {"type": "string"},
+    "description": {"type": "string"},
+    "styles": {
+      "type": "object",
+      "properties": {
+        "primaryColor": {"type": "string"},
+        "secondaryColor": {"type": "string"},
+        "backgroundColor": {"type": "string"},
+        "textColor": {"type": "string"},
+        "headerFont": {"type": "string"},
+        "bodyFont": {"type": "string"},
+        "spacing": {"type": "string"},
+        "borderRadius": {"type": "string"}
+      },
+      "required": ["primaryColor", "textColor"]
+    },
+    "layout": {
+      "type": "object",
+      "properties": {
+        "columns": {"type": "number"},
+        "headerHeight": {"type": "string"},
+        "sectionSpacing": {"type": "string"},
+        "marginSize": {"type": "string"}
+      },
+      "required": ["columns"]
+    },
+    "sections": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "type": "object",
+          "properties": {
+            "order": {"type": "number"},
+            "fullWidth": {"type": "boolean"},
+            "column": {"type": "string"},
+            "title": {"type": "string"},
+            "style": {"type": "string"},
+            "fields": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "dateFormat": {"type": "string"}
+          },
+          "required": ["order"]
+        }
+      }
+    }
+  },
+  "required": ["name", "styles", "layout", "sections"]
+}
