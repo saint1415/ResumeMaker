@@ -1,0 +1,59 @@
+{
+  "name": "Classic",
+  "description": "Traditional professional format",
+  "styles": {
+    "primaryColor": "#000000",
+    "secondaryColor": "#333333",
+    "backgroundColor": "#ffffff",
+    "textColor": "#000000",
+    "headerFont": "Times New Roman, serif",
+    "bodyFont": "Times New Roman, serif",
+    "spacing": "1rem",
+    "borderRadius": "0"
+  },
+  "layout": {
+    "columns": 1,
+    "headerHeight": "auto",
+    "sectionSpacing": "1.5rem",
+    "marginSize": "1rem"
+  },
+  "sections": {
+    "header": {
+      "order": 1,
+      "fullWidth": true,
+      "style": "left-aligned",
+      "fields": ["name", "contact"]
+    },
+    "summary": {
+      "order": 2,
+      "fullWidth": true,
+      "title": "Objective",
+      "style": "paragraph"
+    },
+    "experience": {
+      "order": 3,
+      "fullWidth": true,
+      "title": "Professional Experience",
+      "style": "detailed",
+      "dateFormat": "MMMM YYYY"
+    },
+    "education": {
+      "order": 4,
+      "fullWidth": true,
+      "title": "Education",
+      "style": "detailed"
+    },
+    "skills": {
+      "order": 5,
+      "fullWidth": true,
+      "title": "Technical Skills",
+      "style": "categories"
+    },
+    "certifications": {
+      "order": 6,
+      "fullWidth": true,
+      "title": "Certifications",
+      "style": "list"
+    }
+  }
+}
