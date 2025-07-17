@@ -1,0 +1,280 @@
+{
+  "name": "Technology Professional",
+  "industry": "technology",
+  "description": "Modern template designed for software engineers, data scientists, product managers, and other tech professionals",
+  "suitable_roles": [
+    "software engineer", "data scientist", "product manager", "devops engineer",
+    "full stack developer", "frontend developer", "backend developer", "mobile developer",
+    "ui/ux designer", "systems architect", "security engineer", "qa engineer"
+  ],
+  "styles": {
+    "primaryColor": "#6366f1",
+    "secondaryColor": "#4f46e5",
+    "accentColor": "#8b5cf6",
+    "backgroundColor": "#ffffff",
+    "textColor": "#111827",
+    "headerFont": "Inter, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "spacing": "1.5rem",
+    "borderRadius": "0.5rem",
+    "modernAccents": true
+  },
+  "layout": {
+    "columns": 2,
+    "headerHeight": "auto",
+    "sectionSpacing": "1.5rem",
+    "marginSize": "1.25rem",
+    "responsiveDesign": true
+  },
+  "sections": {
+    "header": {
+      "order": 1,
+      "fullWidth": true,
+      "style": "modern_tech",
+      "fields": ["name", "title", "contact", "github", "portfolio"],
+      "customization": {
+        "social_links": true,
+        "portfolio_prominence": "high",
+        "github_stats": true
+      }
+    },
+    "technical_summary": {
+      "order": 2,
+      "fullWidth": true,
+      "title": "Technical Summary",
+      "style": "concise_paragraph",
+      "guidelines": {
+        "word_count": "60-120",
+        "focus": "technical expertise, problem-solving approach, impact",
+        "tone": "confident, results-oriented, technically precise"
+      }
+    },
+    "technical_skills": {
+      "order": 3,
+      "column": "right",
+      "title": "Technical Skills",
+      "style": "categorized_modern",
+      "priority": "high",
+      "categories": {
+        "programming_languages": {
+          "title": "Programming Languages",
+          "skill_level": true,
+          "examples": ["JavaScript", "Python", "Java", "TypeScript", "Go", "Rust"]
+        },
+        "frameworks_libraries": {
+          "title": "Frameworks & Libraries",
+          "examples": ["React", "Node.js", "Django", "Spring", "Vue.js", "Angular"]
+        },
+        "databases": {
+          "title": "Databases",
+          "examples": ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Elasticsearch"]
+        },
+        "cloud_devops": {
+          "title": "Cloud & DevOps",
+          "examples": ["AWS", "Docker", "Kubernetes", "Jenkins", "Terraform", "Azure"]
+        },
+        "tools": {
+          "title": "Development Tools",
+          "examples": ["Git", "VS Code", "JIRA", "Slack", "Figma", "Postman"]
+        }
+      }
+    },
+    "professional_experience": {
+      "order": 4,
+      "column": "left",
+      "title": "Professional Experience",
+      "style": "tech_focused",
+      "priority": "high",
+      "fields": ["company", "position", "dates", "technologies", "achievements", "impact"],
+      "guidelines": {
+        "emphasize": "technical challenges, solutions implemented, measurable impact",
+        "quantify": "performance improvements, user growth, system scalability, bug reduction"
+      },
+      "customization": {
+        "tech_stack_highlighting": true,
+        "project_links": true,
+        "team_size_context": true
+      }
+    },
+    "featured_projects": {
+      "order": 5,
+      "column": "left",
+      "title": "Featured Projects",
+      "style": "project_showcase",
+      "priority": "high",
+      "fields": ["name", "description", "technologies", "role", "github_link", "live_demo", "impact"],
+      "guidelines": {
+        "focus": "technical complexity, problem-solving, innovation",
+        "include": "architecture decisions, challenges overcome, results achieved"
+      },
+      "customization": {
+        "github_integration": true,
+        "live_demo_links": true,
+        "technology_badges": true
+      }
+    },
+    "education": {
+      "order": 6,
+      "column": "right",
+      "title": "Education",
+      "style": "tech_relevant",
+      "fields": ["institution", "degree", "field", "graduation_date", "relevant_coursework", "gpa"],
+      "customization": {
+        "relevant_coursework": true,
+        "academic_projects": true,
+        "online_courses": true
+      }
+    },
+    "certifications": {
+      "order": 7,
+      "column": "right",
+      "title": "Certifications",
+      "style": "tech_badges",
+      "fields": ["name", "issuer", "date", "credential_id", "verification_url"],
+      "customization": {
+        "badge_display": true,
+        "expiry_tracking": true,
+        "verification_links": true
+      }
+    },
+    "open_source": {
+      "order": 8,
+      "column": "right",
+      "title": "Open Source Contributions",
+      "style": "contribution_list",
+      "optional": true,
+      "fields": ["project", "contribution_type", "technologies", "impact", "links"],
+      "customization": {
+        "github_stats": true,
+        "contribution_graphs": false,
+        "commit_highlights": true
+      }
+    },
+    "achievements": {
+      "order": 9,
+      "fullWidth": true,
+      "title": "Key Achievements",
+      "style": "impact_metrics",
+      "optional": true,
+      "guidelines": {
+        "focus": "technical achievements, performance improvements, innovation",
+        "metrics": "response times, user engagement, cost savings, system reliability"
+      }
+    },
+    "speaking_writing": {
+      "order": 10,
+      "column": "right",
+      "title": "Speaking & Writing",
+      "style": "thought_leadership",
+      "optional": true,
+      "fields": ["title", "event_publication", "date", "audience_size", "links"]
+    }
+  },
+  "industry_keywords": [
+    "software development", "full stack", "frontend", "backend", "mobile development",
+    "web applications", "API development", "database design", "cloud computing",
+    "microservices", "containerization", "CI/CD", "version control", "agile",
+    "scrum", "test-driven development", "code review", "debugging", "optimization",
+    "scalability", "performance", "security", "user experience", "responsive design",
+    "machine learning", "artificial intelligence", "data analysis", "automation"
+  ],
+  "tech_stack_emphasis": {
+    "modern_frameworks": true,
+    "cloud_native": true,
+    "devops_tools": true,
+    "emerging_technologies": true
+  },
+  "formatting_guidelines": {
+    "date_format": "MMM YYYY",
+    "github_integration": true,
+    "link_formatting": "professional",
+    "code_snippets": false,
+    "technical_diagrams": false
+  },
+  "ats_optimization": {
+    "keywords_density": "high",
+    "technical_terms": "prominent",
+    "section_headers": "standard",
+    "file_format": "pdf_optimized"
+  },
+  "customization_options": {
+    "role_focus": {
+      "frontend_developer": {
+        "emphasize": ["ui_frameworks", "design_systems", "user_experience", "responsive_design"],
+        "highlight_skills": ["React", "Vue.js", "CSS", "JavaScript", "TypeScript", "Figma"]
+      },
+      "backend_developer": {
+        "emphasize": ["server_architecture", "databases", "apis", "performance_optimization"],
+        "highlight_skills": ["Node.js", "Python", "Java", "SQL", "NoSQL", "Docker", "Kubernetes"]
+      },
+      "full_stack_developer": {
+        "emphasize": ["end_to_end_development", "technical_versatility", "system_integration"],
+        "highlight_skills": ["React", "Node.js", "databases", "cloud_platforms", "DevOps"]
+      },
+      "data_scientist": {
+        "emphasize": ["data_analysis", "machine_learning", "statistical_modeling", "insights"],
+        "highlight_skills": ["Python", "R", "SQL", "TensorFlow", "PyTorch", "Pandas", "Jupyter"]
+      },
+      "devops_engineer": {
+        "emphasize": ["infrastructure", "automation", "monitoring", "deployment_pipelines"],
+        "highlight_skills": ["Docker", "Kubernetes", "AWS", "Jenkins", "Terraform", "Ansible"]
+      },
+      "product_manager": {
+        "emphasize": ["product_strategy", "user_research", "data_driven_decisions", "cross_functional_leadership"],
+        "highlight_skills": ["analytics", "user_research", "agile", "roadmap_planning", "stakeholder_management"]
+      }
+    },
+    "experience_level": {
+      "junior": {
+        "emphasize": ["education", "projects", "technical_skills", "learning_agility"],
+        "include": ["bootcamp_experience", "internships", "personal_projects", "online_courses"]
+      },
+      "mid_level": {
+        "emphasize": ["professional_experience", "technical_leadership", "project_ownership"],
+        "include": ["mentoring", "code_reviews", "architectural_decisions"]
+      },
+      "senior": {
+        "emphasize": ["technical_leadership", "system_design", "team_mentoring", "business_impact"],
+        "include": ["architecture_decisions", "technical_strategy", "cross_team_collaboration"]
+      },
+      "staff_principal": {
+        "emphasize": ["technical_vision", "organizational_impact", "industry_influence"],
+        "include": ["technical_standards", "platform_development", "technical_roadmap"]
+      }
+    }
+  },
+  "role_specific_variants": {
+    "software_engineer": {
+      "required_sections": ["technical_skills", "professional_experience", "featured_projects"],
+      "emphasized_skills": ["programming_languages", "frameworks", "problem_solving", "system_design"],
+      "additional_sections": ["code_portfolio", "technical_blog", "hackathons"]
+    },
+    "data_scientist": {
+      "required_sections": ["technical_skills", "data_projects", "analytical_experience"],
+      "emphasized_skills": ["machine_learning", "statistical_analysis", "data_visualization", "python_r"],
+      "additional_sections": ["research_publications", "kaggle_competitions", "data_certifications"]
+    },
+    "product_manager": {
+      "required_sections": ["product_experience", "technical_understanding", "business_impact"],
+      "emphasized_skills": ["product_strategy", "user_research", "data_analysis", "stakeholder_management"],
+      "additional_sections": ["product_launches", "user_research", "market_analysis"]
+    },
+    "devops_engineer": {
+      "required_sections": ["infrastructure_experience", "automation_projects", "cloud_platforms"],
+      "emphasized_skills": ["containerization", "orchestration", "ci_cd", "monitoring", "security"],
+      "additional_sections": ["infrastructure_projects", "automation_tools", "performance_optimization"]
+    },
+    "ui_ux_designer": {
+      "required_sections": ["design_portfolio", "design_process", "user_research"],
+      "emphasized_skills": ["design_tools", "user_research", "prototyping", "visual_design", "interaction_design"],
+      "additional_sections": ["design_portfolio", "case_studies", "design_thinking"]
+    }
+  },
+  "portfolio_integration": {
+    "github_prominence": true,
+    "live_demo_links": true,
+    "project_screenshots": false,
+    "code_samples": false,
+    "technical_blog": true
+  }
+}
