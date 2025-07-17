@@ -1,0 +1,341 @@
+{
+  "name": "Creative Professional",
+  "industry": "creative",
+  "description": "Visually striking template for designers, artists, marketers, and creative professionals emphasizing portfolio and visual impact",
+  "suitable_roles": [
+    "graphic designer", "art director", "creative director", "ui/ux designer",
+    "web designer", "brand designer", "photographer", "videographer",
+    "copywriter", "content creator", "marketing creative", "digital artist"
+  ],
+  "styles": {
+    "primaryColor": "#7c3aed",
+    "secondaryColor": "#a855f7",
+    "accentColor": "#c084fc",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1f2937",
+    "headerFont": "Poppins, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "spacing": "1.75rem",
+    "borderRadius": "0.75rem",
+    "creative_accents": true,
+    "visual_hierarchy": "strong"
+  },
+  "layout": {
+    "columns": 2,
+    "headerHeight": "auto",
+    "sectionSpacing": "2rem",
+    "marginSize": "1.5rem",
+    "visual_flow": "dynamic",
+    "white_space": "generous"
+  },
+  "sections": {
+    "header": {
+      "order": 1,
+      "fullWidth": true,
+      "style": "creative_hero",
+      "fields": ["name", "creative_title", "contact", "portfolio", "social_media"],
+      "customization": {
+        "portfolio_prominence": "highest",
+        "social_media_integration": true,
+        "personal_brand_emphasis": true,
+        "visual_elements": true
+      }
+    },
+    "creative_summary": {
+      "order": 2,
+      "fullWidth": true,
+      "title": "Creative Philosophy",
+      "style": "brand_statement",
+      "guidelines": {
+        "word_count": "50-100",
+        "focus": "creative vision, design philosophy, unique value proposition",
+        "tone": "passionate, confident, authentic, inspiring"
+      }
+    },
+    "portfolio_highlights": {
+      "order": 3,
+      "fullWidth": true,
+      "title": "Featured Work",
+      "style": "portfolio_showcase",
+      "priority": "highest",
+      "fields": ["project_name", "client", "role", "description", "tools_used", "results", "portfolio_link"],
+      "customization": {
+        "visual_thumbnails": false,
+        "case_study_links": true,
+        "client_logos": false,
+        "awards_integration": true
+      }
+    },
+    "creative_skills": {
+      "order": 4,
+      "column": "right",
+      "title": "Creative Skills",
+      "style": "skill_categories",
+      "priority": "high",
+      "categories": {
+        "design_software": {
+          "title": "Design Software",
+          "skill_level": true,
+          "examples": ["Adobe Creative Suite", "Figma", "Sketch", "Canva", "Procreate"]
+        },
+        "design_disciplines": {
+          "title": "Design Disciplines",
+          "examples": ["Brand Identity", "UI/UX Design", "Print Design", "Digital Marketing", "Illustration"]
+        },
+        "technical_skills": {
+          "title": "Technical Skills",
+          "examples": ["HTML/CSS", "JavaScript", "WordPress", "Photography", "Video Editing"]
+        },
+        "creative_process": {
+          "title": "Creative Process",
+          "examples": ["Design Thinking", "User Research", "Prototyping", "Brand Strategy", "Concept Development"]
+        }
+      }
+    },
+    "professional_experience": {
+      "order": 5,
+      "column": "left",
+      "title": "Professional Experience",
+      "style": "creative_timeline",
+      "priority": "high",
+      "fields": ["company", "position", "dates", "key_projects", "achievements", "creative_impact"],
+      "guidelines": {
+        "emphasize": "creative projects, brand impact, user engagement, design solutions",
+        "quantify": "engagement rates, brand awareness, conversion improvements, user satisfaction"
+      },
+      "customization": {
+        "project_focus": true,
+        "client_diversity": true,
+        "creative_challenges": true
+      }
+    },
+    "education_training": {
+      "order": 6,
+      "column": "right",
+      "title": "Education & Training",
+      "style": "creative_education",
+      "fields": ["institution", "degree", "field", "graduation_date", "relevant_coursework", "portfolio_projects"],
+      "customization": {
+        "portfolio_projects": true,
+        "creative_workshops": true,
+        "online_courses": true,
+        "artistic_background": true
+      }
+    },
+    "awards_recognition": {
+      "order": 7,
+      "column": "right",
+      "title": "Awards & Recognition",
+      "style": "achievement_showcase",
+      "fields": ["award_name", "organization", "project", "date", "category"],
+      "customization": {
+        "design_competitions": true,
+        "industry_recognition": true,
+        "client_testimonials": false
+      }
+    },
+    "creative_process": {
+      "order": 8,
+      "fullWidth": true,
+      "title": "Design Process & Methodology",
+      "style": "process_flow",
+      "optional": true,
+      "guidelines": {
+        "focus": "design thinking approach, problem-solving methodology, creative workflow"
+      }
+    },
+    "brand_clients": {
+      "order": 9,
+      "column": "left",
+      "title": "Notable Clients & Collaborations",
+      "style": "client_showcase",
+      "optional": true,
+      "customization": {
+        "client_anonymity": true,
+        "project_diversity": true,
+        "industry_range": true
+      }
+    },
+    "technical_proficiency": {
+      "order": 10,
+      "column": "right",
+      "title": "Software & Tools",
+      "style": "tool_mastery",
+      "categories": {
+        "adobe_creative": {
+          "title": "Adobe Creative Suite",
+          "proficiency_levels": true,
+          "examples": ["Photoshop", "Illustrator", "InDesign", "After Effects", "Premiere Pro"]
+        },
+        "design_tools": {
+          "title": "Design & Prototyping",
+          "examples": ["Figma", "Sketch", "Adobe XD", "InVision", "Principle"]
+        },
+        "web_development": {
+          "title": "Web Development",
+          "examples": ["HTML5", "CSS3", "JavaScript", "WordPress", "Webflow"]
+        },
+        "photography_video": {
+          "title": "Photography & Video",
+          "examples": ["Lightroom", "Capture One", "Final Cut Pro", "DaVinci Resolve"]
+        }
+      }
+    },
+    "creative_interests": {
+      "order": 11,
+      "column": "right",
+      "title": "Creative Interests",
+      "style": "passion_projects",
+      "optional": true,
+      "examples": ["Typography", "Street Photography", "Digital Art", "Brand Strategy", "Sustainable Design"]
+    },
+    "online_presence": {
+      "order": 12,
+      "fullWidth": true,
+      "title": "Online Portfolio & Social Presence",
+      "style": "digital_showcase",
+      "fields": ["platform", "url", "follower_count", "engagement_rate", "content_focus"],
+      "customization": {
+        "portfolio_integration": true,
+        "social_proof": true,
+        "content_strategy": true
+      }
+    }
+  },
+  "industry_keywords": [
+    "graphic design", "visual design", "brand identity", "user interface", "user experience",
+    "creative direction", "art direction", "visual communication", "design thinking",
+    "brand strategy", "digital design", "print design", "typography", "illustration",
+    "photography", "videography", "motion graphics", "web design", "mobile design",
+    "creative campaign", "brand development", "visual storytelling", "design systems",
+    "creative problem solving", "concept development", "creative strategy"
+  ],
+  "portfolio_emphasis": {
+    "visual_impact": true,
+    "project_diversity": true,
+    "creative_process": true,
+    "results_focused": true
+  },
+  "formatting_guidelines": {
+    "date_format": "YYYY",
+    "visual_hierarchy": "strong",
+    "white_space": "generous",
+    "creative_elements": "tasteful",
+    "readability": "maintained"
+  },
+  "ats_optimization": {
+    "keywords_density": "medium",
+    "creative_terminology": "prominent",
+    "section_headers": "creative_but_readable",
+    "file_format": "pdf_optimized"
+  },
+  "customization_options": {
+    "role_focus": {
+      "graphic_designer": {
+        "emphasize": ["visual_design", "brand_identity", "print_digital", "client_projects"],
+        "highlight_skills": ["Adobe_Creative_Suite", "typography", "brand_design", "layout_design"]
+      },
+      "ui_ux_designer": {
+        "emphasize": ["user_research", "interaction_design", "prototyping", "usability_testing"],
+        "highlight_skills": ["Figma", "Sketch", "user_research", "wireframing", "design_systems"]
+      },
+      "art_director": {
+        "emphasize": ["creative_leadership", "campaign_development", "team_management", "brand_strategy"],
+        "highlight_skills": ["creative_direction", "team_leadership", "brand_strategy", "campaign_development"]
+      },
+      "creative_director": {
+        "emphasize": ["strategic_vision", "creative_leadership", "brand_development", "team_management"],
+        "highlight_skills": ["creative_strategy", "brand_development", "team_leadership", "client_relations"]
+      },
+      "web_designer": {
+        "emphasize": ["web_design", "responsive_design", "user_experience", "front_end_development"],
+        "highlight_skills": ["HTML_CSS", "responsive_design", "WordPress", "user_experience", "web_optimization"]
+      },
+      "photographer": {
+        "emphasize": ["photography_portfolio", "technical_expertise", "post_processing", "client_relationships"],
+        "highlight_skills": ["photography", "Lightroom", "Photoshop", "lighting", "composition"]
+      },
+      "copywriter": {
+        "emphasize": ["writing_portfolio", "brand_voice", "campaign_copy", "content_strategy"],
+        "highlight_skills": ["copywriting", "content_strategy", "brand_voice", "campaign_development"]
+      }
+    },
+    "experience_level": {
+      "junior_creative": {
+        "emphasize": ["education", "personal_projects", "internships", "creative_passion"],
+        "include": ["student_work", "creative_challenges", "skill_development", "online_courses"]
+      },
+      "mid_level": {
+        "emphasize": ["professional_projects", "client_work", "skill_advancement", "creative_solutions"],
+        "include": ["project_leadership", "client_collaboration", "creative_problem_solving"]
+      },
+      "senior_creative": {
+        "emphasize": ["creative_leadership", "strategic_thinking", "team_mentoring", "business_impact"],
+        "include": ["team_leadership", "creative_strategy", "client_relationships", "business_development"]
+      },
+      "creative_director": {
+        "emphasize": ["creative_vision", "strategic_leadership", "brand_development", "organizational_impact"],
+        "include": ["creative_strategy", "team_building", "client_leadership", "industry_influence"]
+      }
+    },
+    "industry_specialization": {
+      "advertising_agency": {
+        "emphasize": ["campaign_development", "client_brands", "creative_concepts", "team_collaboration"],
+        "highlight": ["integrated_campaigns", "brand_activation", "creative_awards", "client_satisfaction"]
+      },
+      "in_house_corporate": {
+        "emphasize": ["brand_consistency", "internal_communications", "stakeholder_management", "brand_guidelines"],
+        "highlight": ["brand_management", "internal_communications", "project_management", "cross_functional_collaboration"]
+      },
+      "freelance_consultant": {
+        "emphasize": ["client_diversity", "project_management", "business_development", "creative_solutions"],
+        "highlight": ["client_relationships", "project_delivery", "creative_problem_solving", "business_acumen"]
+      },
+      "digital_agency": {
+        "emphasize": ["digital_campaigns", "social_media", "web_design", "user_experience"],
+        "highlight": ["digital_strategy", "social_media_campaigns", "web_development", "digital_marketing"]
+      }
+    }
+  },
+  "role_specific_variants": {
+    "graphic_designer": {
+      "required_sections": ["portfolio_highlights", "creative_skills", "design_software"],
+      "emphasized_skills": ["visual_design", "typography", "brand_identity", "layout_design"],
+      "additional_sections": ["design_philosophy", "client_testimonials", "design_awards"]
+    },
+    "ui_ux_designer": {
+      "required_sections": ["ux_portfolio", "design_process", "user_research"],
+      "emphasized_skills": ["user_research", "wireframing", "prototyping", "usability_testing"],
+      "additional_sections": ["case_studies", "design_thinking", "user_testing_results"]
+    },
+    "art_director": {
+      "required_sections": ["creative_campaigns", "team_leadership", "brand_strategy"],
+      "emphasized_skills": ["creative_direction", "team_management", "brand_development", "campaign_strategy"],
+      "additional_sections": ["creative_awards", "team_achievements", "brand_impact"]
+    },
+    "photographer": {
+      "required_sections": ["photography_portfolio", "technical_skills", "client_experience"],
+      "emphasized_skills": ["photography", "post_processing", "lighting", "composition"],
+      "additional_sections": ["equipment_expertise", "specialization_areas", "exhibition_history"]
+    },
+    "copywriter": {
+      "required_sections": ["writing_portfolio", "campaign_work", "brand_voice"],
+      "emphasized_skills": ["copywriting", "content_strategy", "brand_messaging", "campaign_development"],
+      "additional_sections": ["published_work", "writing_awards", "content_performance"]
+    }
+  },
+  "visual_elements": {
+    "color_usage": "strategic",
+    "typography_hierarchy": "strong",
+    "white_space": "generous",
+    "visual_flow": "guided",
+    "brand_consistency": true
+  },
+  "portfolio_integration": {
+    "project_case_studies": true,
+    "before_after_showcases": false,
+    "process_documentation": true,
+    "client_results": true,
+    "creative_challenges": true
+  }
+}
