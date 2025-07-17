@@ -1,0 +1,350 @@
+{
+  "industries": {
+    "technology": {
+      "programming_languages": {
+        "frontend": ["javascript", "typescript", "html", "css", "react", "angular", "vue", "svelte"],
+        "backend": ["python", "java", "c#", "php", "ruby", "go", "rust", "scala", "kotlin"],
+        "mobile": ["swift", "objective-c", "kotlin", "java", "react native", "flutter", "xamarin"],
+        "data": ["python", "r", "sql", "scala", "julia", "matlab"]
+      },
+      "frameworks_libraries": {
+        "web": ["react", "angular", "vue", "express", "django", "flask", "spring", "laravel", "rails"],
+        "mobile": ["react native", "flutter", "ionic", "cordova", "xamarin"],
+        "data": ["pandas", "numpy", "tensorflow", "pytorch", "scikit-learn", "keras"],
+        "testing": ["jest", "cypress", "selenium", "junit", "pytest", "mocha"]
+      },
+      "databases": {
+        "relational": ["mysql", "postgresql", "oracle", "sql server", "sqlite"],
+        "nosql": ["mongodb", "cassandra", "dynamodb", "redis", "elasticsearch"],
+        "cloud": ["amazon rds", "azure sql", "google cloud sql", "firebase"]
+      },
+      "cloud_platforms": {
+        "aws": ["ec2", "s3", "lambda", "rds", "dynamodb", "cloudformation", "eks"],
+        "azure": ["app service", "sql database", "cosmos db", "functions", "aks"],
+        "gcp": ["compute engine", "cloud storage", "cloud functions", "bigquery", "gke"]
+      },
+      "tools_technologies": {
+        "version_control": ["git", "github", "gitlab", "bitbucket", "svn"],
+        "ci_cd": ["jenkins", "github actions", "gitlab ci", "azure devops", "circleci"],
+        "containerization": ["docker", "kubernetes", "podman", "containerd"],
+        "monitoring": ["prometheus", "grafana", "elk stack", "datadog", "new relic"]
+      },
+      "methodologies": {
+        "development": ["agile", "scrum", "kanban", "waterfall", "lean"],
+        "practices": ["tdd", "bdd", "pair programming", "code review", "continuous integration"],
+        "architecture": ["microservices", "monolithic", "serverless", "event-driven", "restful api"]
+      }
+    },
+    "finance": {
+      "analysis_tools": {
+        "software": ["excel", "bloomberg terminal", "reuters eikon", "factset", "matlab"],
+        "programming": ["python", "r", "sql", "vba", "sas"],
+        "visualization": ["tableau", "power bi", "qlik", "spotfire"]
+      },
+      "financial_instruments": {
+        "equity": ["stocks", "etfs", "options", "futures", "derivatives"],
+        "fixed_income": ["bonds", "treasuries", "corporate bonds", "municipal bonds"],
+        "alternative": ["hedge funds", "private equity", "real estate", "commodities"]
+      },
+      "regulations_standards": {
+        "accounting": ["gaap", "ifrs", "sox", "sec reporting"],
+        "risk": ["basel iii", "dodd-frank", "mifid", "var", "stress testing"],
+        "compliance": ["kyc", "aml", "fatca", "crs", "gdpr"]
+      },
+      "certifications": {
+        "analysis": ["cfa", "frm", "caia", "pmp"],
+        "accounting": ["cpa", "acca", "cia", "cma"],
+        "risk": ["prmia", "garp", "iia", "isaca"]
+      }
+    },
+    "healthcare": {
+      "clinical_systems": {
+        "emr_ehr": ["epic", "cerner", "allscripts", "athenahealth", "meditech"],
+        "imaging": ["pacs", "dicom", "ris", "3d slicer", "itk-snap"],
+        "laboratory": ["lis", "lims", "cerner pathnet", "epic beaker"]
+      },
+      "specialties": {
+        "medical": ["cardiology", "oncology", "neurology", "pediatrics", "psychiatry"],
+        "surgical": ["orthopedic", "cardiac", "neurosurgery", "plastic", "general surgery"],
+        "diagnostic": ["radiology", "pathology", "laboratory medicine", "nuclear medicine"]
+      },
+      "regulations_standards": {
+        "privacy": ["hipaa", "hitech", "gdpr", "phi"],
+        "quality": ["joint commission", "cms", "fda", "iso 27001"],
+        "clinical": ["gcp", "ich", "cdisc", "hl7", "fhir"]
+      },
+      "technologies": {
+        "ai_ml": ["medical imaging ai", "nlp", "clinical decision support", "predictive analytics"],
+        "devices": ["iot", "wearables", "telemedicine", "remote monitoring"],
+        "interoperability": ["hl7 fhir", "cda", "ccda", "ihe", "snomed ct"]
+      }
+    },
+    "marketing": {
+      "digital_marketing": {
+        "channels": ["seo", "sem", "social media", "email marketing", "content marketing"],
+        "platforms": ["google ads", "facebook ads", "linkedin ads", "twitter ads", "tiktok ads"],
+        "tools": ["google analytics", "adobe analytics", "mixpanel", "hotjar", "optimizely"]
+      },
+      "content_creation": {
+        "design": ["photoshop", "illustrator", "canva", "figma", "sketch"],
+        "video": ["premiere pro", "after effects", "final cut pro", "davinci resolve"],
+        "writing": ["copywriting", "content strategy", "seo writing", "technical writing"]
+      },
+      "automation_tools": {
+        "email": ["mailchimp", "hubspot", "marketo", "pardot", "constant contact"],
+        "social": ["hootsuite", "buffer", "sprout social", "later", "socialbakers"],
+        "crm": ["salesforce", "hubspot", "pipedrive", "zoho", "freshworks"]
+      },
+      "analytics_metrics": {
+        "web": ["conversion rate", "bounce rate", "ctr", "cpa", "roas"],
+        "social": ["engagement rate", "reach", "impressions", "follower growth"],
+        "email": ["open rate", "click rate", "unsubscribe rate", "deliverability"]
+      }
+    },
+    "sales": {
+      "process_methodologies": {
+        "frameworks": ["challenger sale", "spin selling", "sandler", "consultative selling"],
+        "stages": ["prospecting", "qualifying", "presenting", "objection handling", "closing"],
+        "activities": ["cold calling", "warm calling", "email outreach", "social selling"]
+      },
+      "tools_platforms": {
+        "crm": ["salesforce", "hubspot", "pipedrive", "zoho", "freshsales"],
+        "prospecting": ["linkedin sales navigator", "zoominfo", "outreach", "salesloft"],
+        "communication": ["zoom", "gotomeeting", "calendly", "vidyard", "loom"]
+      },
+      "metrics_kpis": {
+        "activity": ["calls made", "emails sent", "meetings booked", "demos given"],
+        "performance": ["quota attainment", "win rate", "average deal size", "sales cycle length"],
+        "pipeline": ["pipeline value", "pipeline velocity", "conversion rates", "churn rate"]
+      }
+    },
+    "project_management": {
+      "methodologies": {
+        "traditional": ["waterfall", "prince2", "pmbok", "critical path method"],
+        "agile": ["scrum", "kanban", "lean", "safe", "extreme programming"],
+        "hybrid": ["scrumban", "water-scrum-fall", "disciplined agile"]
+      },
+      "tools_software": {
+        "planning": ["microsoft project", "primavera", "smartsheet", "monday.com"],
+        "agile": ["jira", "azure devops", "rally", "versionone", "targetprocess"],
+        "collaboration": ["confluence", "slack", "microsoft teams", "notion", "asana"]
+      },
+      "certifications": {
+        "traditional": ["pmp", "prince2", "capm", "pgmp"],
+        "agile": ["csm", "psm", "safe", "acp", "cspo"],
+        "specialized": ["six sigma", "lean", "change management", "business analysis"]
+      }
+    }
+  },
+  "soft_skills": {
+    "leadership": {
+      "core": ["team leadership", "people management", "strategic thinking", "decision making"],
+      "communication": ["public speaking", "presentation skills", "active listening", "conflict resolution"],
+      "development": ["mentoring", "coaching", "talent development", "succession planning"]
+    },
+    "communication": {
+      "verbal": ["presentation", "public speaking", "interpersonal", "negotiation"],
+      "written": ["technical writing", "business writing", "documentation", "reporting"],
+      "digital": ["email communication", "video conferencing", "social media", "collaboration tools"]
+    },
+    "problem_solving": {
+      "analytical": ["critical thinking", "data analysis", "root cause analysis", "pattern recognition"],
+      "creative": ["innovation", "brainstorming", "design thinking", "out-of-box thinking"],
+      "technical": ["troubleshooting", "debugging", "system analysis", "process improvement"]
+    },
+    "collaboration": {
+      "teamwork": ["cross-functional collaboration", "stakeholder management", "consensus building"],
+      "cultural": ["cultural sensitivity", "diversity awareness", "global mindset", "inclusion"],
+      "virtual": ["remote collaboration", "virtual team management", "digital communication"]
+    }
+  },
+  "action_verbs": {
+    "leadership": ["led", "managed", "directed", "supervised", "coordinated", "orchestrated"],
+    "achievement": ["achieved", "accomplished", "attained", "exceeded", "surpassed", "delivered"],
+    "improvement": ["improved", "enhanced", "optimized", "streamlined", "upgraded", "modernized"],
+    "creation": ["created", "developed", "designed", "built", "established", "launched"],
+    "analysis": ["analyzed", "evaluated", "assessed", "researched", "investigated", "examined"],
+    "collaboration": ["collaborated", "partnered", "facilitated", "coordinated", "liaised", "interfaced"]
+  },
+  "quantifiable_metrics": {
+    "business": ["revenue", "profit", "cost savings", "efficiency gains", "market share", "customer satisfaction"],
+    "performance": ["productivity", "quality", "accuracy", "speed", "uptime", "availability"],
+    "growth": ["user growth", "subscriber growth", "conversion rate", "retention rate", "engagement"],
+    "scale": ["volume", "capacity", "throughput", "scalability", "coverage", "reach"]
+  },
+  "certifications_by_industry": {
+    "technology": {
+      "cloud": ["aws certified", "azure certified", "google cloud certified"],
+      "security": ["cissp", "cisa", "cism", "comptia security+", "ethical hacker"],
+      "project_management": ["pmp", "scrum master", "agile certified"],
+      "development": ["oracle certified", "microsoft certified", "cisco certified"]
+    },
+    "finance": {
+      "investment": ["cfa", "frm", "caia", "cipm"],
+      "accounting": ["cpa", "acca", "cma", "cia"],
+      "risk": ["prmia", "garp certification", "operational risk"],
+      "banking": ["cams", "cfcs", "crcm", "cbb"]
+    },
+    "healthcare": {
+      "clinical": ["board certified", "acls", "bls", "pals"],
+      "management": ["ache", "himss", "ahima", "hfma"],
+      "quality": ["six sigma", "lean healthcare", "cphq", "cphims"],
+      "informatics": ["rhia", "rhit", "chps", "cdip"]
+    },
+    "marketing": {
+      "digital": ["google ads certified", "facebook blueprint", "hubspot certified"],
+      "analytics": ["google analytics certified", "adobe certified", "tableau certified"],
+      "content": ["content marketing institute", "hootsuite certified", "semrush certified"]
+    }
+  },
+  "trending_keywords": {
+    "2024_2025": {
+      "technology": ["artificial intelligence", "machine learning", "generative ai", "llm", "prompt engineering"],
+      "business": ["digital transformation", "sustainability", "esg", "remote work", "hybrid work"],
+      "skills": ["emotional intelligence", "adaptability", "digital literacy", "data literacy"],
+      "methodologies": ["design thinking", "growth hacking", "lean startup", "customer success"]
+    }
+  },
+  "ats_optimization": {
+    "formatting_keywords": ["professional", "experienced", "skilled", "certified", "qualified"],
+    "location_keywords": ["remote", "hybrid", "onsite", "flexible", "distributed"],
+    "employment_types": ["full-time", "part-time", "contract", "freelance", "consultant"],
+    "seniority_levels": ["entry level", "junior", "mid-level", "senior", "lead", "principal", "director"]
+  },
+  "keyword_synonyms": {
+    "javascript": ["js", "ecmascript", "node.js", "react", "angular", "vue"],
+    "machine_learning": ["ml", "artificial intelligence", "ai", "deep learning", "neural networks"],
+    "project_management": ["pm", "program management", "scrum master", "agile coach"],
+    "user_experience": ["ux", "user interface", "ui", "usability", "human-computer interaction"],
+    "database": ["sql", "data management", "data storage", "rdbms", "nosql"],
+    "customer_service": ["customer support", "client relations", "customer success", "help desk", "technical support"],
+    "data_analysis": ["data analytics", "business intelligence", "reporting", "data visualization", "statistical analysis"],
+    "quality_assurance": ["qa", "testing", "quality control", "test automation", "software testing"],
+    "business_development": ["sales", "lead generation", "account management", "partnership development"],
+    "digital_marketing": ["online marketing", "internet marketing", "web marketing", "e-marketing"],
+    "software_development": ["programming", "coding", "application development", "system development"],
+    "cloud_computing": ["cloud services", "saas", "paas", "iaas", "serverless", "distributed computing"],
+    "cybersecurity": ["information security", "infosec", "network security", "data protection", "cyber defense"],
+    "mobile_development": ["app development", "ios development", "android development", "mobile apps"],
+    "web_development": ["frontend development", "backend development", "full stack development", "web applications"],
+    "devops": ["deployment", "continuous integration", "continuous deployment", "infrastructure automation"],
+    "product_management": ["product strategy", "product planning", "roadmap development", "feature development"],
+    "financial_analysis": ["financial modeling", "investment analysis", "budget analysis", "cost analysis"],
+    "market_research": ["consumer research", "competitive analysis", "market analysis", "industry research"],
+    "content_creation": ["content development", "copywriting", "creative writing", "content strategy"],
+    "social_media": ["social networking", "community management", "social media management", "influencer marketing"],
+    "email_marketing": ["email campaigns", "newsletter marketing", "email automation", "direct marketing"],
+    "search_engine_optimization": ["seo", "organic search", "search marketing", "keyword optimization"],
+    "pay_per_click": ["ppc", "paid search", "google ads", "search engine marketing", "sem"],
+    "conversion_optimization": ["cro", "a/b testing", "landing page optimization", "funnel optimization"],
+    "business_analysis": ["requirements analysis", "process analysis", "system analysis", "gap analysis"],
+    "change_management": ["organizational change", "transformation", "process improvement", "change leadership"],
+    "risk_management": ["risk assessment", "risk mitigation", "compliance", "regulatory affairs"],
+    "supply_chain": ["logistics", "procurement", "vendor management", "inventory management"],
+    "human_resources": ["hr", "talent acquisition", "recruiting", "people operations", "workforce planning"],
+    "training_development": ["learning and development", "employee training", "skill development", "coaching"],
+    "performance_management": ["kpi management", "metrics", "performance optimization", "goal setting"],
+    "process_improvement": ["lean", "six sigma", "operational excellence", "efficiency improvement"],
+    "strategic_planning": ["business strategy", "corporate strategy", "long-term planning", "vision development"]
+  },
+  "industry_specific_acronyms": {
+    "technology": {
+      "api": "application programming interface",
+      "sdk": "software development kit",
+      "ide": "integrated development environment",
+      "ui": "user interface",
+      "ux": "user experience",
+      "qa": "quality assurance",
+      "ci_cd": "continuous integration continuous deployment",
+      "orm": "object relational mapping",
+      "mvc": "model view controller",
+      "spa": "single page application",
+      "pwa": "progressive web application",
+      "saas": "software as a service",
+      "paas": "platform as a service",
+      "iaas": "infrastructure as a service"
+    },
+    "finance": {
+      "roi": "return on investment",
+      "ebitda": "earnings before interest taxes depreciation amortization",
+      "kpi": "key performance indicator",
+      "aum": "assets under management",
+      "var": "value at risk",
+      "irr": "internal rate of return",
+      "npv": "net present value",
+      "dcf": "discounted cash flow",
+      "pe": "price to earnings",
+      "pb": "price to book",
+      "roe": "return on equity",
+      "roa": "return on assets",
+      "eps": "earnings per share"
+    },
+    "healthcare": {
+      "emr": "electronic medical record",
+      "ehr": "electronic health record",
+      "phi": "protected health information",
+      "hipaa": "health insurance portability accountability act",
+      "cpt": "current procedural terminology",
+      "icd": "international classification of diseases",
+      "hcpcs": "healthcare common procedure coding system",
+      "cms": "centers for medicare medicaid services",
+      "fda": "food and drug administration",
+      "dea": "drug enforcement administration"
+    },
+    "marketing": {
+      "ctr": "click through rate",
+      "cpm": "cost per mille",
+      "cpc": "cost per click",
+      "cpa": "cost per acquisition",
+      "roas": "return on ad spend",
+      "ltv": "lifetime value",
+      "cac": "customer acquisition cost",
+      "mrr": "monthly recurring revenue",
+      "arr": "annual recurring revenue",
+      "nps": "net promoter score"
+    }
+  },
+  "power_words": {
+    "impact": ["transformed", "revolutionized", "pioneered", "spearheaded", "catalyzed"],
+    "leadership": ["championed", "orchestrated", "mobilized", "galvanized", "influenced"],
+    "results": ["delivered", "achieved", "exceeded", "surpassed", "maximized"],
+    "innovation": ["innovated", "reimagined", "modernized", "disrupted", "breakthrough"],
+    "efficiency": ["streamlined", "optimized", "automated", "accelerated", "enhanced"],
+    "growth": ["expanded", "scaled", "amplified", "boosted", "propelled"],
+    "problem_solving": ["resolved", "troubleshot", "diagnosed", "remediated", "rectified"],
+    "collaboration": ["partnered", "unified", "aligned", "synchronized", "integrated"]
+  },
+  "measurable_outcomes": {
+    "percentages": ["increased by", "decreased by", "improved by", "reduced by", "grew by"],
+    "dollar_amounts": ["saved", "generated", "earned", "revenue of", "budget of"],
+    "time_savings": ["reduced time by", "accelerated by", "shortened by", "completed in"],
+    "scale": ["managed team of", "oversaw", "responsible for", "handled volume of"],
+    "frequency": ["daily", "weekly", "monthly", "quarterly", "annually"]
+  },
+  "remote_work_keywords": {
+    "skills": ["remote collaboration", "virtual team management", "digital communication", "self-motivated"],
+    "tools": ["zoom", "slack", "microsoft teams", "asana", "trello", "notion"],
+    "practices": ["asynchronous communication", "time zone management", "remote presentations"],
+    "qualities": ["independent", "proactive", "adaptable", "organized", "reliable"]
+  },
+  "diversity_inclusion_keywords": {
+    "concepts": ["diversity", "inclusion", "equity", "belonging", "cultural competency"],
+    "practices": ["unconscious bias training", "inclusive leadership", "diverse hiring"],
+    "initiatives": ["employee resource groups", "mentorship programs", "accessibility"],
+    "awareness": ["cultural sensitivity", "global mindset", "cross-cultural communication"]
+  },
+  "sustainability_keywords": {
+    "environmental": ["sustainability", "carbon footprint", "renewable energy", "green technology"],
+    "social": ["social responsibility", "community impact", "stakeholder engagement"],
+    "governance": ["esg", "ethical practices", "corporate governance", "transparency"],
+    "circular_economy": ["waste reduction", "recycling", "sustainable practices", "environmental stewardship"]
+  },
+  "emerging_technologies": {
+    "ai_ml": ["artificial intelligence", "machine learning", "deep learning", "neural networks", "nlp", "computer vision"],
+    "blockchain": ["distributed ledger", "cryptocurrency", "smart contracts", "defi", "nft"],
+    "iot": ["internet of things", "connected devices", "edge computing", "sensor networks"],
+    "quantum": ["quantum computing", "quantum algorithms", "quantum cryptography"],
+    "ar_vr": ["augmented reality", "virtual reality", "mixed reality", "metaverse", "immersive technology"],
+    "robotics": ["automation", "robotic process automation", "autonomous systems", "industrial robots"]
+  }
+}
