@@ -1,0 +1,232 @@
+{
+  "name": "Healthcare Professional",
+  "industry": "healthcare",
+  "description": "Professional template optimized for healthcare positions including clinical, administrative, and research roles",
+  "suitable_roles": [
+    "physician", "nurse", "medical assistant", "healthcare administrator", 
+    "clinical researcher", "pharmacist", "therapist", "medical technician"
+  ],
+  "styles": {
+    "primaryColor": "#2563eb",
+    "secondaryColor": "#1e40af",
+    "accentColor": "#3b82f6",
+    "backgroundColor": "#ffffff",
+    "textColor": "#1f2937",
+    "headerFont": "Inter, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "spacing": "1.5rem",
+    "borderRadius": "0.375rem"
+  },
+  "layout": {
+    "columns": 2,
+    "headerHeight": "auto",
+    "sectionSpacing": "1.75rem",
+    "marginSize": "1.5rem",
+    "pageBreaks": "auto"
+  },
+  "sections": {
+    "header": {
+      "order": 1,
+      "fullWidth": true,
+      "style": "professional",
+      "fields": ["name", "credentials", "title", "contact"],
+      "customization": {
+        "credentials_display": "after_name",
+        "license_numbers": true,
+        "emergency_contact": false
+      }
+    },
+    "professional_summary": {
+      "order": 2,
+      "fullWidth": true,
+      "title": "Professional Summary",
+      "style": "paragraph",
+      "guidelines": {
+        "word_count": "75-150",
+        "focus": "clinical expertise, patient care philosophy, specialized skills",
+        "tone": "professional, compassionate, detail-oriented"
+      }
+    },
+    "licenses_certifications": {
+      "order": 3,
+      "column": "right",
+      "title": "Licenses & Certifications",
+      "style": "detailed_list",
+      "priority": "high",
+      "fields": ["name", "issuer", "number", "expiry_date", "renewal_status"],
+      "customization": {
+        "group_by_type": true,
+        "highlight_current": true,
+        "expiry_alerts": true
+      }
+    },
+    "clinical_experience": {
+      "order": 4,
+      "column": "left",
+      "title": "Clinical Experience",
+      "style": "detailed_timeline",
+      "priority": "high",
+      "fields": ["facility", "position", "department", "dates", "patient_population", "procedures", "achievements"],
+      "guidelines": {
+        "emphasize": "patient outcomes, quality metrics, safety initiatives",
+        "quantify": "patient volumes, efficiency improvements, satisfaction scores"
+      }
+    },
+    "education": {
+      "order": 5,
+      "column": "right",
+      "title": "Education",
+      "style": "academic_detailed",
+      "fields": ["institution", "degree", "field", "graduation_date", "gpa", "honors", "thesis"],
+      "customization": {
+        "include_clinical_rotations": true,
+        "residency_fellowship": true,
+        "continuing_education": true
+      }
+    },
+    "core_competencies": {
+      "order": 6,
+      "column": "right",
+      "title": "Core Competencies",
+      "style": "categorized_skills",
+      "categories": {
+        "clinical_skills": {
+          "title": "Clinical Skills",
+          "examples": ["patient assessment", "diagnostic procedures", "treatment planning", "medication management"]
+        },
+        "technical_skills": {
+          "title": "Technical Proficiency",
+          "examples": ["EMR systems", "medical devices", "laboratory equipment", "imaging technology"]
+        },
+        "soft_skills": {
+          "title": "Professional Skills",
+          "examples": ["patient communication", "interdisciplinary collaboration", "cultural competency", "crisis management"]
+        }
+      }
+    },
+    "specializations": {
+      "order": 7,
+      "column": "left",
+      "title": "Areas of Specialization",
+      "style": "highlighted_list",
+      "customization": {
+        "include_procedures": true,
+        "patient_populations": true,
+        "treatment_modalities": true
+      }
+    },
+    "quality_initiatives": {
+      "order": 8,
+      "column": "left",
+      "title": "Quality & Safety Initiatives",
+      "style": "achievement_focused",
+      "guidelines": {
+        "focus": "patient safety, quality improvement, regulatory compliance",
+        "metrics": "infection rates, readmission rates, patient satisfaction, accreditation results"
+      }
+    },
+    "research_publications": {
+      "order": 9,
+      "fullWidth": true,
+      "title": "Research & Publications",
+      "style": "academic_citation",
+      "optional": true,
+      "fields": ["title", "journal", "authors", "date", "doi", "impact_factor"]
+    },
+    "professional_affiliations": {
+      "order": 10,
+      "column": "right",
+      "title": "Professional Memberships",
+      "style": "simple_list",
+      "fields": ["organization", "membership_type", "leadership_roles", "dates"]
+    },
+    "awards_recognition": {
+      "order": 11,
+      "column": "right",
+      "title": "Awards & Recognition",
+      "style": "achievement_list",
+      "optional": true,
+      "customization": {
+        "include_patient_recognition": true,
+        "peer_nominations": true,
+        "institutional_awards": true
+      }
+    }
+  },
+  "industry_keywords": [
+    "patient care", "clinical assessment", "treatment planning", "medication administration",
+    "medical records", "HIPAA compliance", "quality assurance", "patient safety",
+    "interdisciplinary collaboration", "evidence-based practice", "clinical protocols",
+    "regulatory compliance", "accreditation standards", "infection control",
+    "patient advocacy", "cultural competency", "crisis intervention", "documentation",
+    "EMR", "EHR", "Epic", "Cerner", "Meditech", "telehealth", "telemedicine"
+  ],
+  "compliance_requirements": {
+    "hipaa_awareness": true,
+    "patient_safety_focus": true,
+    "quality_metrics": true,
+    "regulatory_compliance": true,
+    "continuing_education": true
+  },
+  "formatting_guidelines": {
+    "date_format": "MM/YYYY",
+    "license_format": "full_details",
+    "credential_placement": "after_name",
+    "emphasis_style": "bold",
+    "bullet_style": "professional"
+  },
+  "ats_optimization": {
+    "keywords_density": "medium",
+    "section_headers": "standard",
+    "file_format": "pdf_preferred",
+    "font_requirements": "professional"
+  },
+  "customization_options": {
+    "clinical_vs_administrative": {
+      "clinical_focus": {
+        "emphasize": ["clinical_experience", "licenses_certifications", "core_competencies"],
+        "de_emphasize": ["administrative_experience", "business_skills"]
+      },
+      "administrative_focus": {
+        "emphasize": ["administrative_experience", "business_skills", "leadership"],
+        "de_emphasize": ["clinical_procedures", "patient_care_details"]
+      }
+    },
+    "experience_level": {
+      "new_graduate": {
+        "emphasize": ["education", "clinical_rotations", "certifications"],
+        "include": ["academic_projects", "volunteer_experience", "relevant_coursework"]
+      },
+      "experienced": {
+        "emphasize": ["clinical_experience", "specializations", "quality_initiatives"],
+        "include": ["leadership_roles", "mentoring_experience", "research"]
+      },
+      "senior_leadership": {
+        "emphasize": ["leadership", "strategic_initiatives", "organizational_impact"],
+        "include": ["board_positions", "speaking_engagements", "policy_development"]
+      }
+    }
+  },
+  "role_specific_variants": {
+    "physician": {
+      "required_sections": ["medical_education", "residency", "board_certifications", "hospital_affiliations"],
+      "emphasized_skills": ["diagnostic_accuracy", "surgical_procedures", "patient_management", "clinical_research"],
+      "additional_sections": ["medical_licenses", "malpractice_history", "peer_reviews"]
+    },
+    "nurse": {
+      "required_sections": ["nursing_education", "nursing_license", "clinical_experience"],
+      "emphasized_skills": ["patient_assessment", "medication_administration", "care_coordination", "patient_advocacy"],
+      "additional_sections": ["specialty_certifications", "unit_experience", "charge_nurse_experience"]
+    },
+    "healthcare_administrator": {
+      "required_sections": ["healthcare_education", "administrative_experience", "regulatory_knowledge"],
+      "emphasized_skills": ["operations_management", "budget_oversight", "staff_leadership", "compliance"],
+      "additional_sections": ["accreditation_experience", "quality_improvement", "strategic_planning"]
+    },
+    "clinical_researcher": {
+      "required_sections": ["research_education", "research_experience", "publications"],
+      "emphasized_skills": ["protocol_development", "data_analysis", "regulatory_compliance", "grant_writing"],
+      "additional_sections": ["irb_experience", "clinical_trials", "research_methodologies"]
+    }
+  }
+}
